@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (4.8.2)
+  - CropViewController (2.5.1)
+  - IQKeyboardManagerSwift (6.4.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - ObjectMapper (3.5.1)
+  - PureLayout (3.1.4)
+  - SwiftyJSON (5.0.0)
+  - Swinject (2.6.2)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+  - Toast-Swift (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CropViewController
+  - IQKeyboardManagerSwift
+  - MagicalRecord
+  - ObjectMapper
+  - PureLayout
+  - SwiftyJSON
+  - Swinject
+  - SwinjectStoryboard
+  - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  CropViewController: 10ba7af75e302f2db7eb913f8aa1156f95cfe88e
+  IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+
+PODFILE CHECKSUM: d333291be9d661a855af3c69256eb71072a84e00
+
+COCOAPODS: 1.4.0
