@@ -88,6 +88,7 @@ extension SwinjectStoryboard
         defaultContainer.storyboardInitCompleted(DisplayPhotoViewController.self) {
             resolveable, viewController in
             viewController._dataOfflineController = resolveable.resolve(IDataOffline.self)
+            viewController._dataOnlineController = resolveable.resolve(IDataOnline.self)
             viewController._imageListController = resolveable.resolve(IImageList.self)
         }
         

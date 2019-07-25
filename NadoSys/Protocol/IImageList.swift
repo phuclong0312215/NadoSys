@@ -8,6 +8,7 @@
 
 import Foundation
 protocol IImageList {
+    func GetListUploadDisplay(_ competitorId: Int,shopId: Int,reportDate: Int,imageType: Int,empId: Int) -> [ImageListModel]? 
     func GetLists(_ competitorId: Int,shopId: Int,reportDate: Int,imageType: Int,empId: Int,categoryCode: String) -> [ImageListModel]?
     func GetListUploads(_ competitorId: Int,shopId: Int,reportDate: Int,imageType: Int,empId: Int) -> [ImageListModel]? 
     func Insert(_ model: ImageListModel,completionHandler: @escaping (Bool?) -> ())

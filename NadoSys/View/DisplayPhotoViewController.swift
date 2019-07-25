@@ -60,7 +60,9 @@ class DisplayPhotoViewController: UIViewController {
     
     @IBAction func save(_ sender: Any) {
         var count: Int = 0
-        let images = self._imageListController.GetListUploads(self._competitorId, shopId: self._shopId!, reportDate: Date().toIntShortDate(), imageType: self._imageType, empId: (self._login?.employeeId)!)
+        let images = self._imageListController.GetListUploadDisplay(self._competitorId, shopId: self._shopId!, reportDate: Date().toIntShortDate(), imageType: self._imageType, empId: (self._login?.employeeId)!)
+        
+        //if (cell._imageList?.count)! > 0 {
         if images != nil && (images?.count)! > 0{
             SVProgressHUD.show()
             for item in images!{
@@ -122,9 +124,9 @@ extension DisplayPhotoViewController: UITableViewDelegate,UITableViewDataSource{
         let objectName = _categorys[indexPath.row].categoryCode != "OVERVIEW" ? "DISPLAY" : _categorys[indexPath.row].categoryCode
         let imageType = (_dataOfflineController.ByObjectName("IMAGETYPE", objectName: objectName)?.objectId)!
         cell._imageList = _imageListController.GetLists(_competitorId, shopId: _shopId!, reportDate: Date().toIntShortDate(), imageType: imageType, empId: (_login?.employeeId)!,categoryCode: _categorys[indexPath.row].categoryCode)
-        if (cell._imageList?.count)! > 0 {
+        //if (cell._imageList?.count)! > 0 {
            cell.updateUI()
-        }
+        //}
         return cell
         
     }

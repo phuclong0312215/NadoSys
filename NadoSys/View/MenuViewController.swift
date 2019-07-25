@@ -11,8 +11,8 @@ import UIKit
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var myTable: UITableView!
-    var arrMenu:[String] = ["Market Sensing","Internal Operation Control","Team Management","Training"]
-    var arrImg:[String] = ["i_marketsensing","i_operation","i_team","i_training"]
+    var arrMenu:[String] = ["Internal Operation Control","Team Management","Training"]
+    var arrImg:[String] = ["i_operation","i_team","i_training"]
     var _dataOfflineController: IDataOffline!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,15 +74,15 @@ extension MenuViewController: UITableViewDelegate,UITableViewDataSource{
         return arrMenu.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            //pushViewController(withIdentifier: "frmHome")
-            //performSegue(withIdentifier: "sw_shop",sender: self)
-            break
-        default:
+//        switch indexPath.row {
+//        case 0:
+//            //pushViewController(withIdentifier: "frmHome")
+//            //performSegue(withIdentifier: "sw_shop",sender: self)
+//            break
+//        default:
             Function.Message("Info", message: "Comming soon")
-            break
-        }
+           // break
+       // }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTable.dequeueReusableCell(withIdentifier: "cellMenu", for: indexPath as IndexPath) as! cellMenu

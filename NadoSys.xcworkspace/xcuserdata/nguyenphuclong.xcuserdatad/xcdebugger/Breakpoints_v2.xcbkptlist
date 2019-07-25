@@ -57,13 +57,13 @@
                   symbolName = "NadoSys.ModelListViewController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenphuclong/Desktop/working/tuyendung/appIos/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "585681337.8026071"
+                  urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
+                  timestampString = "585761601.726115"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
                   endingLineNumber = "152"
-                  offsetFromSymbolStart = "301">
+                  offsetFromSymbolStart = "276">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -72,8 +72,8 @@
                   symbolName = "closure #1 (NadoSys.ProductModel) -&gt; Swift.Bool in NadoSys.ModelListViewController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenphuclong/Desktop/working/tuyendung/appIos/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "585681337.855011"
+                  urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
+                  timestampString = "585761601.7288181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
@@ -145,6 +145,54 @@
             endingLineNumber = "115"
             landmarkName = "save(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NadoSys/View/DisplayPhotoViewController.swift"
+            timestampString = "585761601.234175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "save(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NadoSys.DisplayPhotoViewController.save(Any) -&gt; ()"
+                  moduleName = "NadoSys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
+                  timestampString = "585761601.759413"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NadoSys.DisplayPhotoViewController.save(Any) -&gt; ()"
+                  moduleName = "NadoSys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
+                  timestampString = "585761601.762054"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "3100">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -48,6 +48,38 @@ public class ImageListController: IImageList{
         }
         return nil
     }
+    func GetListUploadDisplay(_ competitorId: Int,shopId: Int,reportDate: Int,imageType: Int,empId: Int) -> [ImageListModel]? {
+        var results = [ImageListModel]()
+        let context = NSManagedObjectContext.mr_()
+        let predicate = NSPredicate(format: "reportdate = \(Date().toIntShortDate())")
+        let predicate1 = NSPredicate(format: "competitorid = \(competitorId)")
+        let predicate2 = NSPredicate(format: "shopid = '\(shopId)'")
+        let predicate3 = NSPredicate(format: "empid = '\(empId)'")
+        let predicate4 = NSPredicate(format: "imagetype = '\(imageType)' OR imagetype = '1020'")
+        var predicateCompound = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate,predicate1,predicate2,predicate3,predicate4])
+        if let objs = ImageList.mr_findAllSorted(by: "createddate", ascending: true,with: predicateCompound, in: context) as? [ImageList]{
+            for entity in objs {
+                let model = ImageListModel()
+                model.shopId = Int(entity.shopid)
+                if let urlimage = entity.urlimage{
+                    model.urlimage = urlimage
+                }
+                if let categorycode = entity.categorycode{
+                    model.categorycode = categorycode
+                }
+                model.productId = Int(entity.productid)
+                model.empId = Int(entity.empid)
+                model.competitorId = Int(entity.competitorid)
+                model.changed = Int(entity.changed)
+                model.imageType = Int(entity.imagetype)
+                model.reportdate = Int(entity.reportdate)
+                model.createddate = entity.createddate
+                results.append(model)
+            }
+            return results
+        }
+        return nil
+    }
     
     func GetLists(_ competitorId: Int,shopId: Int,reportDate: Int,imageType: Int,empId: Int,categoryCode: String) -> [ImageListModel]? {
         var results = [ImageListModel]()

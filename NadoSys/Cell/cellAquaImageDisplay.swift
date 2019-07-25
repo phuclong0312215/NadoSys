@@ -53,7 +53,9 @@ extension cellAquaImageDisplay: UICollectionViewDataSource,UICollectionViewDeleg
     func updateUI(){
         collecView.reloadData()
     }
-    
+//    func clearUI(){
+//        collecView.clear
+//    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (_imageList!.count)
         

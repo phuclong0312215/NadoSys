@@ -2099,14 +2099,14 @@
             <objects>
                 <viewController storyboardIdentifier="frmCreateSellOut" id="SkQ-ke-6dY" customClass="CreateSellOutViewController" customModule="NadoSys" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAp-OU-dtM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="2400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzd-EC-QTG">
-                                <rect key="frame" x="0.0" y="64" width="320" height="1936"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="2336"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-W2-O0y">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="2400"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-sM-7Ld">
                                                 <rect key="frame" x="0.0" y="385" width="320" height="229"/>
@@ -2713,7 +2713,7 @@
                                             <constraint firstItem="K1o-sM-7Ld" firstAttribute="top" secondItem="DI1-90-zy9" secondAttribute="bottom" constant="8" id="BMz-CJ-hSQ"/>
                                             <constraint firstItem="c1V-2n-MGN" firstAttribute="top" secondItem="c9S-lV-Ldy" secondAttribute="bottom" constant="8" id="Cg2-LX-CbT"/>
                                             <constraint firstAttribute="trailing" secondItem="cU9-Ia-AzL" secondAttribute="trailing" constant="8" id="Dpc-sK-vUh"/>
-                                            <constraint firstAttribute="height" constant="2000" id="ErE-AC-WNT"/>
+                                            <constraint firstAttribute="height" constant="2400" id="ErE-AC-WNT"/>
                                             <constraint firstItem="DI1-90-zy9" firstAttribute="top" secondItem="c1V-2n-MGN" secondAttribute="bottom" id="Hgf-NS-VeA"/>
                                             <constraint firstAttribute="trailing" secondItem="c1V-2n-MGN" secondAttribute="trailing" id="INI-bN-NX0"/>
                                             <constraint firstAttribute="trailing" secondItem="DI1-90-zy9" secondAttribute="trailing" id="Pr9-PO-9Q2"/>
@@ -2749,7 +2749,7 @@
                         <viewLayoutGuide key="safeArea" id="y4w-0A-3ST"/>
                     </view>
                     <navigationItem key="navigationItem" id="EQt-gx-3lK"/>
-                    <size key="freeformSize" width="320" height="2000"/>
+                    <size key="freeformSize" width="320" height="2400"/>
                     <connections>
                         <outlet property="btnAdd" destination="d6A-Sn-SEz" id="mvS-Vv-YGf"/>
                         <outlet property="heightSupplier" destination="HkT-hP-MkN" id="N0j-DB-5mI"/>
@@ -5173,7 +5173,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="K6A-yQ-nJM"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thông tin cửa hàng đang chờ cấp quản lý xác nhận" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msb-6z-v1v">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thông tin cửa hàng đang chờ cấp quản lý xác nhận" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msb-6z-v1v">
                                                 <rect key="frame" x="0.0" y="3" width="318" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6244,48 +6244,28 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_signout_white" translatesAutoresizingMaskIntoConstraints="NO" id="y78-DE-4zY">
-                                        <rect key="frame" x="211" y="89" width="37" height="33"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_signout_white" translatesAutoresizingMaskIntoConstraints="NO" id="y78-DE-4zY">
+                                        <rect key="frame" x="209" y="88" width="39" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lock_white" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-de-lpO">
-                                        <rect key="frame" x="166" y="89" width="37" height="33"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ic_lock_white" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-de-lpO">
+                                        <rect key="frame" x="-309" y="89" width="37" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="37" id="uSL-zv-dv0"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_white" translatesAutoresizingMaskIntoConstraints="NO" id="Vd7-wV-VFG">
-                                        <rect key="frame" x="121" y="89" width="37" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="37" id="Xie-lF-BcK"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_update_white" translatesAutoresizingMaskIntoConstraints="NO" id="SnE-wj-fYS">
-                                        <rect key="frame" x="76" y="89" width="37" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="37" id="GYs-Wr-utN"/>
-                                        </constraints>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_update_white" translatesAutoresizingMaskIntoConstraints="NO" id="SnE-wj-fYS">
+                                        <rect key="frame" x="164" y="88" width="37" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039215686274508" green="0.40000000000000002" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="bTY-de-lpO" firstAttribute="leading" secondItem="Vd7-wV-VFG" secondAttribute="trailing" constant="8" symbolic="YES" id="0i3-PG-zUv"/>
-                                    <constraint firstItem="SnE-wj-fYS" firstAttribute="leading" secondItem="WGs-pa-MPp" secondAttribute="leading" constant="76" id="0ye-hK-chC"/>
                                     <constraint firstAttribute="height" constant="128" id="1Rf-Sg-obj"/>
-                                    <constraint firstItem="SnE-wj-fYS" firstAttribute="top" secondItem="Vd7-wV-VFG" secondAttribute="top" id="2Pl-38-92O"/>
-                                    <constraint firstItem="SnE-wj-fYS" firstAttribute="top" secondItem="uMw-W4-zrT" secondAttribute="bottom" constant="8" symbolic="YES" id="7cg-pd-dna"/>
-                                    <constraint firstItem="SnE-wj-fYS" firstAttribute="bottom" secondItem="Vd7-wV-VFG" secondAttribute="bottom" id="AsZ-Ri-e9V"/>
-                                    <constraint firstAttribute="bottom" secondItem="SnE-wj-fYS" secondAttribute="bottom" constant="6" id="Bg9-IY-LoJ"/>
                                     <constraint firstItem="hcP-yD-2FO" firstAttribute="leading" secondItem="WGs-pa-MPp" secondAttribute="leading" constant="75" id="TbP-o8-0DR"/>
-                                    <constraint firstItem="Vd7-wV-VFG" firstAttribute="bottom" secondItem="bTY-de-lpO" secondAttribute="bottom" id="V3u-UV-4wc"/>
-                                    <constraint firstAttribute="trailing" secondItem="y78-DE-4zY" secondAttribute="trailing" constant="72" id="Vz0-ba-9ek"/>
-                                    <constraint firstItem="Vd7-wV-VFG" firstAttribute="top" secondItem="bTY-de-lpO" secondAttribute="top" id="dNK-hW-Ma1"/>
                                     <constraint firstItem="uMw-W4-zrT" firstAttribute="top" secondItem="hcP-yD-2FO" secondAttribute="bottom" constant="10" id="gan-4O-BSc"/>
-                                    <constraint firstItem="bTY-de-lpO" firstAttribute="bottom" secondItem="y78-DE-4zY" secondAttribute="bottom" id="hGc-qI-QXj"/>
-                                    <constraint firstItem="Vd7-wV-VFG" firstAttribute="leading" secondItem="SnE-wj-fYS" secondAttribute="trailing" constant="8" symbolic="YES" id="iZc-1r-Nv4"/>
-                                    <constraint firstItem="y78-DE-4zY" firstAttribute="leading" secondItem="bTY-de-lpO" secondAttribute="trailing" constant="8" symbolic="YES" id="kws-pa-3IY"/>
                                     <constraint firstItem="hcP-yD-2FO" firstAttribute="top" secondItem="WGs-pa-MPp" secondAttribute="top" constant="14" id="v7K-Hp-IgQ"/>
                                     <constraint firstItem="uMw-W4-zrT" firstAttribute="leading" secondItem="WGs-pa-MPp" secondAttribute="leading" id="wSc-dK-VQt"/>
-                                    <constraint firstItem="bTY-de-lpO" firstAttribute="top" secondItem="y78-DE-4zY" secondAttribute="top" id="yCU-L4-fv9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -7074,7 +7054,6 @@
         <image name="ic_uncheck" width="512" height="512"/>
         <image name="ic_update_white" width="512" height="512"/>
         <image name="ic_user" width="48" height="48"/>
-        <image name="ic_user_white" width="512" height="512"/>
         <image name="logo_white" width="353" height="136"/>
     </resources>
     <inferredMetricsTieBreakers>
