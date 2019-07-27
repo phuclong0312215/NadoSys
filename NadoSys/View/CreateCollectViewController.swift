@@ -15,8 +15,10 @@ class CreateCollectViewController: UIViewController {
     var _listBrand = [ObjectDataModel]()
     var _listCate = [ObjectDataModel]()
     var _listType = [ObjectDataModel]()
+    var _listTitle = [ObjectDataModel]()
     var _brandId: Int = 0
     var _typeId: Int = 0
+    var _titleId: Int = 0
     var _delegate: delegateRefeshCollectData?
     @IBOutlet weak var txtDes: UITextField!
     @IBOutlet weak var txtTitle: UITextField!
@@ -24,7 +26,9 @@ class CreateCollectViewController: UIViewController {
     @IBOutlet weak var txtBrand: UITextField!
     @IBOutlet weak var txtCate: UITextField!
     @IBOutlet weak var txtModel: UITextField!
-    @IBOutlet weak var viewDescription: UIView!
+   
+    @IBOutlet weak var txtGift: UITextField!
+    @IBOutlet weak var txtPrice: UITextField!
     @IBOutlet weak var viewModel: UIView!
     @IBOutlet weak var viewCate: UIView!
     @IBOutlet weak var viewBrand: UIView!
@@ -38,7 +42,7 @@ class CreateCollectViewController: UIViewController {
     var _shopId = Int(Preferences.get(key: "SHOPID"))
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLayout()
+       // setLayout()
         setEventView()
         initData()
         // Do any additional setup after loading the view.
@@ -53,11 +57,14 @@ class CreateCollectViewController: UIViewController {
         self.viewCate.addGestureRecognizer(gestureCate)
         let gestureType = UITapGestureRecognizer(target: self, action:  #selector(self.getType))
         self.viewType.addGestureRecognizer(gestureType)
+        let gestureTitle = UITapGestureRecognizer(target: self, action:  #selector(self.getTitle))
+        self.viewTitle.addGestureRecognizer(gestureTitle)
     }
     
     func initData(){
         let queue = DispatchQueue(label: "initObjectData")
         queue.async {
+            self._listTitle = self._dataOfflineController.GetListObjectDatas("COLLECT_DATA_TITLE")!
             self._listBrand = self._dataOfflineController.GetListObjectDatas("Compertitor")!
             self._listType = self._dataOfflineController.GetListObjectDatas("PromotionType")!
             let tempCategory = self._dataOfflineController.GetCategory()
@@ -80,6 +87,17 @@ class CreateCollectViewController: UIViewController {
     @objc func getModel(){
         let controller = storyboard?.instantiateViewController(withIdentifier:"frmModelList") as! ModelListViewController
         controller._strModel = txtModel.text!
+        controller._delegate = self
+        if let viewController = self.navigationController{
+            viewController.pushViewController(controller, animated: true)
+        }
+        
+        //pushViewController(withIdentifier: "frmModelList")
+    }
+    @objc func getTitle(){
+        let controller = storyboard?.instantiateViewController(withIdentifier:"frmObjectDataList") as! ObjectDataListViewController
+        controller._objectName = txtTitle.text!
+        controller._listObjs = _listTitle
         controller._delegate = self
         if let viewController = self.navigationController{
             viewController.pushViewController(controller, animated: true)
@@ -118,7 +136,6 @@ class CreateCollectViewController: UIViewController {
     }
     
     func setLayout(){
-        viewDescription.setBorder(radius: 0, color: UIColor(netHex: 0xD6D6D6))
         viewModel.setBorder(radius: 0, color: UIColor(netHex: 0xD6D6D6))
         viewCate.setBorder(radius: 0, color: UIColor(netHex: 0xD6D6D6))
         viewBrand.setBorder(radius: 0, color: UIColor(netHex: 0xD6D6D6))
@@ -129,7 +146,7 @@ class CreateCollectViewController: UIViewController {
 
     func validate() -> Bool {
         if txtTitle.text == "" {
-            Function.Message("Thông báo", message: "Bạn chưa nhập tiêu đề.")
+            Function.Message("Thông báo", message: "Bạn chưa nhập tên chương trình.")
             return false
         }
         if txtType.text == "" {
@@ -158,7 +175,11 @@ class CreateCollectViewController: UIViewController {
             "PromotionName": item.promotionName as AnyObject,
             "Category": item.category as AnyObject,
             "Decription": item.des as AnyObject,
-            "Guid": item.guid as AnyObject
+            "Guid": item.guid as AnyObject,
+            "Price": item.price as AnyObject,
+            "Gift": item.gift as AnyObject,
+            "TitleId": item.titleId as AnyObject
+            
         ]
         promotionResults.append(dictS )
         
@@ -180,6 +201,9 @@ class CreateCollectViewController: UIViewController {
             promotion.category = txtCate.text!
             promotion.brand = _brandId
             promotion.brandName = txtBrand.text!
+            promotion.titleId = _titleId
+            promotion.gift = txtGift.text!
+            promotion.price = Double(txtPrice.text!)!
             promotion.changed = 0
             promotion.id = 0
             _promotionController.InsertPromotion(promotion)
@@ -242,6 +266,10 @@ extension CreateCollectViewController: delegateSelectObjectData{
         }
         else if object.objectType == "CATEGORY"{
             txtCate.text = object.objectName
+        }
+        else if object.objectType == "COLLECT_DATA_TITLE"{
+            txtTitle.text = object.objectName
+            _titleId = object.objectId
         }
     }
     

@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 public class PromotionModel: NSObject, Mappable,Codable{
     var id: Int = 0
+    var titleId: Int = 0
     var employeeId: Int = 0
     var shopId: Int = 0
     var changed: Int = 0
@@ -23,6 +24,8 @@ public class PromotionModel: NSObject, Mappable,Codable{
     var guid: String = ""
     var model: String = ""
     var category: String = ""
+    var price: Double = 0
+    var gift: String = ""
     
     required convenience public init?(map: Map) {
         self.init()
@@ -31,6 +34,7 @@ public class PromotionModel: NSObject, Mappable,Codable{
     public func mapping(map: Map) {
         employeeId            <- map["employeeId"]
         id    <- map["id"]
+        titleId    <- map["titleId"]
         shopId    <- map["shopId"]
         guid    <- map["guid"]
         changed    <- map["changed"]
@@ -43,6 +47,8 @@ public class PromotionModel: NSObject, Mappable,Codable{
         promotionType    <- map["promotionType"]
         brandName    <- map["brandName"]
         category    <- map["category"]
+        price    <- map["price"]
+        gift    <- map["gift"]
     }
 }
 
