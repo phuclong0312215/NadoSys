@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>New Day Solutions</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,11 +17,28 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.5</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>105</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Snap photo</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>track your position to check in</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string> tracks your position to checkin</string>
+	<key>NSLocationUsageDescription</key>
+	<string> tracks your position to checkin</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string> tracks your position to checkin</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to the photo library.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -41,22 +60,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
-    <key>NSCameraUsageDescription</key>
-    <string></string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>track your position to check in</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string> tracks your position to checkin</string>
-    <key>NSLocationUsageDescription</key>
-    <string></string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string> tracks your position to checkin</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>This app requires access to the photo library.</string>
 </dict>
 </plist>

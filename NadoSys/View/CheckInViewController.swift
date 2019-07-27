@@ -128,6 +128,12 @@ class CheckInViewController: UIViewController,cameraProtocol,CLLocationManagerDe
             let path = Function.getPath((attandance?.photo)!)
             imgCheck.setImage(UIImage(contentsOfFile: path), for: .normal)
             imgCheck.isUserInteractionEnabled = false
+            if _type == "IN"{
+                labelAttendance.text = "Giờ vào: "  + (attandance?.createddate.split(separator: " ")[1])!
+            }
+            else{
+                labelAttendance.text = "Giờ ra: "  + (attandance?.createddate.split(separator: " ")[1])!
+            }
         }
         // Do any additional setup after loading the view.
     }

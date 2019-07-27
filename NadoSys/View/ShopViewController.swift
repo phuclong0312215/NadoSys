@@ -57,9 +57,9 @@ class ShopViewController: UIViewController {
         
         button3.addTarget(self, action: #selector(self.back(_:)), for: UIControl.Event.touchUpInside)
        // viewFN.addSubview(label)
-        viewFN.addSubview(button1)
-        viewFN.addSubview(button2)
-        viewFN.addSubview(button3)
+       // viewFN.addSubview(button1)
+        //viewFN.addSubview(button2)
+       // viewFN.addSubview(button3)
         
         
         let rightBarButton = UIBarButtonItem(customView: viewFN)

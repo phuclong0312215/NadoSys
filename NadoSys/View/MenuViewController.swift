@@ -14,6 +14,11 @@ class MenuViewController: UIViewController {
     var arrMenu:[String] = ["Internal Operation Control","Team Management","Training"]
     var arrImg:[String] = ["i_operation","i_team","i_training"]
     var _dataOfflineController: IDataOffline!
+    
+    var _login = Defaults.getUser(key: "LOGIN")
+    
+    @IBOutlet weak var lblName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myTable.delegate = self
@@ -26,6 +31,10 @@ class MenuViewController: UIViewController {
         refreshData.isUserInteractionEnabled = true
         refreshData.addGestureRecognizer(downloadTap)
         // Do any additional setup after loading the view.
+        if _login != nil{
+            lblName.text = "Welcome, " + _login!.employeeName
+            
+        }
     }
     
 
