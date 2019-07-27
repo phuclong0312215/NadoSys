@@ -52,25 +52,25 @@ class ShopProfileViewController: UIViewController {
     func setData(){
         let jsonData = JSON(_shop.item)
        
-            print(jsonData)
-            labelContact.text = jsonData["contactName"].stringValue
-            labelPhone.text = jsonData["contactPhone"].stringValue
-            labelShopsize.text = jsonData["shopSize"].stringValue
-            labelSheftSeft.text = jsonData["sheltOfself"].stringValue == "1" ? "Yes" : "No"
-            labelSheftCompetitor.text = jsonData["sheltOfCompetitor"].stringValue == "1" ? "Yes" : "No"
-            if jsonData["status"].stringValue ==  "1"
-            {
-                labelStatus.text = "Close"
-            }
-            else if jsonData["status"].stringValue ==  "2"{
-                labelStatus.text = "Open"
-            }
-            else{
-                labelStatus.text = "Moved"
-            }
-            labelNote.text = jsonData["note"].stringValue
-            labelShopContact.text = jsonData["contactWithShop"].stringValue
-        
+        //print(jsonData)
+        labelContact.text = jsonData["contactName"].stringValue
+        labelPhone.text = jsonData["contactPhone"].stringValue
+        labelShopsize.text = jsonData["shopSize"].stringValue
+        labelSheftSeft.text = jsonData["sheltOfself"].stringValue == "1" ? "Yes" : "No"
+        labelSheftCompetitor.text = jsonData["sheltOfCompetitor"].stringValue == "1" ? "Yes" : "No"
+        if jsonData["status"].stringValue ==  "1"
+        {
+            labelStatus.text = "Close"
+        }
+        else if jsonData["status"].stringValue ==  "2"{
+            labelStatus.text = "Open"
+        }
+        else{
+            labelStatus.text = "Moved"
+        }
+        labelNote.text = jsonData["note"].stringValue
+        labelShopContact.text = jsonData["contactWithShop"].stringValue
+    
     }
     
     

@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import Toast_Swift
 import MapKit
+import CoreLocation
 class UpdateShopViewController: UIViewController {
 
     @IBOutlet weak var labelIsWait: UILabel!
@@ -235,15 +236,36 @@ class UpdateShopViewController: UIViewController {
         _channelId = _shop.objectId
         if _shop.latitude > 0 && _shop.longitude > 0 {
             let location = CLLocationCoordinate2D(latitude: _shop.latitude,longitude: _shop.longitude)
-            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-            let region = MKCoordinateRegion(center: location, span: span)
-            mapView.setRegion(region, animated: true)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = location
-            annotation.title = _shop.shopName
-            mapView.addAnnotation(annotation)
+            zoom(location)
+        }
+        else{
+            let address = "\(txtHouseNumber.text!) \(txtStreet.text!) \(txtVilla.text!),\(txtWard.text!),\(txtProvince.text!),\(txtProvince.text!)"
+            
+            let geoCoder = CLGeocoder()
+            geoCoder.geocodeAddressString(address) { (placemarks, error) in
+                guard let placemarks = placemarks,
+                    let location = placemarks.first?.location
+                    else {
+                        // handle no location found
+                        return
+                }
+               
+                let location2D = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                self.zoom(location2D)
+                // Use your location
+            }
         }
        // _districtId = _shop.districtId
+    }
+    
+    func zoom(_ location: CLLocationCoordinate2D){
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapView.setRegion(region, animated: true)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = _shop.shopName
+        mapView.addAnnotation(annotation)
     }
     
     func toJson(_ item: ShopModel) -> Data{

@@ -58,7 +58,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "585911942.7396801"
+                  timestampString = "585932432.632074"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
@@ -73,7 +73,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "585911942.744002"
+                  timestampString = "585932432.636404"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NadoSys/View/UpdateShopViewController.swift"
-            timestampString = "585681336.825788"
+            timestampString = "585932432.1459661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "337"
+            endingLineNumber = "337"
             landmarkName = "toJson(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NadoSys/View/DisplayPhotoViewController.swift"
-            timestampString = "585911942.211642"
+            timestampString = "585932432.147242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -170,7 +170,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "585911942.797541"
+                  timestampString = "585932432.717087"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
@@ -185,7 +185,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "585911942.801206"
+                  timestampString = "585932432.7212009"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
@@ -193,6 +193,22 @@
                   offsetFromSymbolStart = "3853">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NadoSys/View/UpdateShopViewController.swift"
+            timestampString = "585932432.1473269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "setData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
