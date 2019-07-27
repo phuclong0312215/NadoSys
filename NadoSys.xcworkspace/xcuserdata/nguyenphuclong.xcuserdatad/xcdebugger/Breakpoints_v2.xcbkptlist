@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NadoSys/View/CollectDataViewController.swift"
-            timestampString = "583929316.680793"
+            timestampString = "585911632.461381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
@@ -58,12 +58,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "585761601.726115"
+                  timestampString = "585911942.7396801"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
                   endingLineNumber = "152"
-                  offsetFromSymbolStart = "276">
+                  offsetFromSymbolStart = "301">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,7 +73,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "585761601.7288181"
+                  timestampString = "585911942.744002"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NadoSys/View/DisplayPhotoViewController.swift"
-            timestampString = "585761601.234175"
+            timestampString = "585911942.211642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -170,12 +170,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "585761601.759413"
+                  timestampString = "585911942.797541"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "112">
+                  offsetFromSymbolStart = "144">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,12 +185,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "585761601.762054"
+                  timestampString = "585911942.801206"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "3100">
+                  offsetFromSymbolStart = "3853">
                </Location>
             </Locations>
          </BreakpointContent>
