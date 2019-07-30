@@ -77,7 +77,7 @@ class ViewController: BaseViewController {
             Function.Message("Thông báo", message: "Vui lòng nhập mật khẩu.")
             return;
         }
-      //  SVProgressHUD.show()
+        SVProgressHUD.show()
         let queue = DispatchQueue(label: "com.login")
         queue.async {
             self._loginController.Login(self.toJsonLogin(),url: URLs.URL_LOGIN) { (data, error) in
@@ -89,6 +89,7 @@ class ViewController: BaseViewController {
                         self.pushViewController(withIdentifier: "frmHome")
                     }
                     else{
+                        SVProgressHUD.dismiss()
                         Function.Message("Thông báo", message: "Bạn nhập chưa đúng tài khoản đăng nhập.")
                     }
                 }

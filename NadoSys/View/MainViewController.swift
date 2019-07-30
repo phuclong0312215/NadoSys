@@ -27,6 +27,10 @@ class MainViewController: UIViewController {
         if shops == nil && regions == nil{
             _maxDownload = _maxDownload + 1
         }
+        if shops != nil && regions != nil {
+         SVProgressHUD.dismiss()
+        }
+        
         let queue = DispatchQueue(label: "com.downloaddata")
         if shops == nil || (shops?.count)! == 0{
             SVProgressHUD.show(withStatus: "Đang cập nhật dữ lieu, vui lòng chờ…")
@@ -83,6 +87,7 @@ class MainViewController: UIViewController {
         viewOperation.setBorder(radius: 4)
         viewTeam.setBorder(radius: 4)
         viewMarketSensing.setBorder(radius: 4)
+       
         // Do any additional setup after loading the view.
     }
     func setNavigationBar(){

@@ -216,7 +216,7 @@ class Http {
         request.httpBody = jsonData
         Alamofire.request(request).responseString
             { (response:DataResponse<String>) in
-                print(response)
+               // print(response)
                 
                 switch(response.result) {
                 case .success(_):
@@ -277,7 +277,7 @@ class Http {
         print(params)
         print(requestURL)
         Alamofire.request(requestURL, method: method, parameters: params, headers: headers).responseJSON { (response:DataResponse<Any>) in
-            print(response)
+           // print(response)
             
             switch(response.result) {
             case .success(_):
