@@ -33,7 +33,7 @@ class POSMViewController: UIViewController {
         btnPhoto.setRounded(radius: 23)
         getNumberDayfromCurrent()
         loadData(Date())
-        addRightButton()
+        setNavigationBar()
         if _type == "STOCK"{
             _shopId = 0
             _url = URLs.URL_POSM_GETDATA_STOCK
@@ -82,6 +82,16 @@ class POSMViewController: UIViewController {
         updateUI()
     }
     
+    func setNavigationBar(){
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x1966a7)
+        navigationController?.navigationBar.tintColor = UIColor.white
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        addRightButton()
+    }
+    
     func addRightButton(){
         //self.navigationItem.rightBarButtonItem?.title = ""
         let title = _type == "STOCK" ? "Nhập tồn POSM" : "Triển khai POSM"
@@ -107,6 +117,10 @@ class POSMViewController: UIViewController {
         if let viewController = self.navigationController{
             viewController.pushViewController(controller, animated: true)
         }
+    }
+    
+    @IBAction func backHome(_ sender: Any) {
+        pushViewController(withIdentifier: "frmHome")
     }
     /*
     // MARK: - Navigation

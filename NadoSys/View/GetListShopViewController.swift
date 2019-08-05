@@ -1,22 +1,26 @@
 //
-//  ShopViewController.swift
+//  GetListShopViewController.swift
 //  NadoSys
 //
-//  Created by Nguyen Phuc Long on 6/8/19.
+//  Created by Nguyen Phuc Long on 8/5/19.
 //  Copyright © 2019 Nguyen Phuc Long. All rights reserved.
 //
 
 import UIKit
 
-class ShopViewController: UIViewController {
+class GetListShopViewController: UIViewController {
 
+    var pickPS: UIPickerView = UIPickerView()
+    @IBOutlet weak var txtPS: UITextField!
     @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet weak var labelTotal: UILabel!
     @IBOutlet weak var _myTable: UITableView!
     var resultSearchController = UISearchController()
     var _listShops = [ShopModel]()
     var _listFilter = [ShopModel]()
-    var _dataOfflineController: IDataOffline!
+    var _lstPS = [String]()
+    var _objectName = ""
+    var _dataOnlineController: IDataOnline!
     var _login = Defaults.getUser(key: "LOGIN")
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +28,20 @@ class ShopViewController: UIViewController {
         txtSearch.delegate = self
         _myTable.delegate = self
         _myTable.dataSource = self
-        getShops()
+        pickPS.dataSource = self
+        pickPS.delegate = self
+        txtPS.inputView = pickPS
+        txtPS.delegate = self
+        txtPS.setBorder(radius: 0, color: UIColor(netHex: 0xD6D6D6))
+       // getShops()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func backHome(_ sender: Any) {
-//        let review: SWRevealViewController = SWRevealViewController()
-//        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "frmInit")
-//        self.present(initialViewControlleripad, animated: false, completion: nil)
-       pushViewController(withIdentifier: "frmHome")
+    func getShops(){
+        labelTotal.text = "\(_listShops.count) stores"
+        updateTableView()
     }
-   
+    
     func setNavigationBar(){
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x1966a7)
@@ -46,55 +52,16 @@ class ShopViewController: UIViewController {
         addRightButton()
     }
     
-   
     
-    func addRightButton(){
+    
+    func addRightButton(){ 
        
-        let viewFN = UIView(frame: CGRect(x: 0, y: 0, width: 90, height: 30))
-        let button1 = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        button1.setImage(UIImage(named: "ic_signout_white"), for: UIControl.State.normal)
-       // button1.setTitle("one", for: .normal)
-  
-        
-        let button2 = UIButton(frame: CGRect(x: 30, y: 0, width: 25, height: 25))
-        button2.setImage(UIImage(named: "ic_user_white"), for: UIControl.State.normal)
-       // button2.setTitle("tow", for: .normal)
-        let button3 = UIButton(frame: CGRect(x: 60, y: 0, width: 25, height: 25))
-        button3.setImage(UIImage(named: "ic_lock_white"), for: UIControl.State.normal)
-       // button3.setTitle("three", for: .normal)
-        
-        button3.addTarget(self, action: #selector(self.back(_:)), for: UIControl.Event.touchUpInside)
-       // viewFN.addSubview(label)
-       // viewFN.addSubview(button1)
-        //viewFN.addSubview(button2)
-       // viewFN.addSubview(button3)
-        
-        
-        let rightBarButton = UIBarButtonItem(customView: viewFN)
-        self.navigationItem.rightBarButtonItem = rightBarButton
         self.navigationController?.navigationBar.topItem!.backBarButtonItem =
             UIBarButtonItem(title:"NDS", style:.plain, target:nil, action:nil)
-       // self.navigationItem.leftBarButtonItem?.title = "NDS"
-        let height: CGFloat = 50 //whatever height you want to add to the existing height
-        let bounds = self.navigationController!.navigationBar.bounds
-       // self.navigationController?.navigationBar.hei
-      //  self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 230)
+             self.navigationItem.rightBarButtonItem =
+            UIBarButtonItem(title:"List shop of \(_objectName)", style:.plain, target:nil, action:nil)
+    }
 
-    }
-    
-    @IBAction func back(_ sender: Any) {
-        guard(navigationController?.popViewController(animated: true)) != nil
-            else{
-                dismiss(animated: true, completion: nil)
-                return
-        }
-    }
-    func getShops(){
-        _listShops = _dataOfflineController.GetListShops((_login?.employeeId)!)!
-        _listFilter = _listShops
-        labelTotal.text = "\(_listShops.count) stores"
-         updateTableView()
-    }
     /*
     // MARK: - Navigation
 
@@ -106,7 +73,7 @@ class ShopViewController: UIViewController {
     */
 
 }
-extension ShopViewController: UITableViewDelegate,UITableViewDataSource{
+extension GetListShopViewController: UITableViewDelegate,UITableViewDataSource{
     func updateTableView(){
         _myTable.reloadData()
     }
@@ -125,7 +92,7 @@ extension ShopViewController: UITableViewDelegate,UITableViewDataSource{
         pushViewController(withIdentifier: "frmKPI")
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellShop", for: indexPath) as! cellShop
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellGetListShop", for: indexPath) as! cellShop
         cell.lbShopName.text = "\(indexPath.row + 1). \(_listFilter[indexPath.row].shopName)"
         cell.lbShopCode.text = "Mã CH: \(_listFilter[indexPath.row].shopCode)"
         cell.lbShopAddress.text = _listFilter[indexPath.row].address
@@ -133,7 +100,7 @@ extension ShopViewController: UITableViewDelegate,UITableViewDataSource{
         
     }
 }
-extension ShopViewController: UITextFieldDelegate{
+extension GetListShopViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let substring = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         if textField == txtSearch {
@@ -158,3 +125,33 @@ extension ShopViewController: UITextFieldDelegate{
         
     }
 }
+extension GetListShopViewController: UIPickerViewDelegate,UIPickerViewDataSource{
+    func updatePickerView(_ pickerView: UIPickerView){
+        pickPS.reloadAllComponents()
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return _lstPS.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return _lstPS[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        txtPS.text = _lstPS[row]
+//        if pickPS.selectedRow(inComponent: 0) > 0{
+//
+//           // _listFilter = _listShops?.filter{$0.is == _categorys[row].categoryCode}
+//        }
+//        else{
+//            arrModel = arrFilter
+//        }
+        
+        _myTable.reloadData()
+        
+    }
+    
+}
+

@@ -20,6 +20,63 @@ public class DataOnlineController: IDataOnline{
         _http = Http()
     }
     
+    func GetShopKeyAccount(_ id: Int,channelId: Int,type: String,area: String,regionId: Int, completionHandler: @escaping ([ShopModel]?, String?) -> ()) {
+        var paramaters: Parameters = [
+            "RowPerPage": 100,
+            "PageNumber": 1,
+            "UserId": id,
+            "channelId": 3,
+            "Area": area,
+            "regionId": regionId
+        ]
+        if type == "Key Account"{
+            paramaters.removeValue(forKey: "Area")
+            paramaters.removeValue(forKey: "regionId")
+            paramaters.updateValue(channelId, forKey: "channelId")
+        }
+        else if type == "Key Shop"{
+             paramaters.removeValue(forKey: "regionId")
+        }
+        else if type == "Region"{
+            paramaters.removeValue(forKey: "Area")
+            paramaters.updateValue("1058 1084", forKey: "channelId")
+        }
+        else if type == "Area"{
+            paramaters.removeValue(forKey: "regionId")
+            paramaters.updateValue("1058 1084", forKey: "channelId")
+        }
+        _http?.performRequest(.get, requestURL: URLs.URL_ALLSHOPS, params: paramaters as [String : AnyObject]) { (responseJSON) in
+            if(responseJSON != nil){
+                let swiftJSON = JSON(responseJSON)
+                let shops = swiftJSON.object
+                let arrShops = Mapper<ShopModel>().mapArray(JSONObject: shops)
+                completionHandler(arrShops, nil)
+            }
+            else{
+                completionHandler(nil,"get shop error.")
+            }
+        }
+    }
+    
+    func GetReportMarketShop(_ id: Int, completionHandler: @escaping ([ReportMarketShopModel]?,[ReportMarketShopModel]?, String?) -> ()) {
+        let paramaters: Parameters = [
+            "userId": id
+        ]
+        _http?.performRequest(.get, requestURL: URLs.URL_REPORT_MARKETSHOP, params: paramaters as [String : AnyObject]) { (responseJSON) in
+            if(responseJSON != nil){
+                let swiftJSON = JSON(responseJSON)
+                let mts = swiftJSON["mt"].object
+                let gts = swiftJSON["gt"].object
+                let arrMts = Mapper<ReportMarketShopModel>().mapArray(JSONObject: mts)
+                let arrGts = Mapper<ReportMarketShopModel>().mapArray(JSONObject: gts)
+                completionHandler(arrMts,arrGts, nil)
+            }
+            else{
+                completionHandler(nil,nil,"get shop error.")
+            }
+        }
+    }
+    
     func GetPosmByEmployeeId(_ id: Int, completionHandler: @escaping ([POSMModel]?, String?) -> ()) {
         let paramaters: Parameters = [
             "EmployeeId": id

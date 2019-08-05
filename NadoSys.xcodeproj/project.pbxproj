@@ -30,6 +30,9 @@
 		931B805B22ABA20D00A43653 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B805A22ABA20D00A43653 /* MainViewController.swift */; };
 		931B805D22AD050100A43653 /* KPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B805C22AD050100A43653 /* KPIViewController.swift */; };
 		931B805F22AD073200A43653 /* cellKPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B805E22AD073200A43653 /* cellKPI.swift */; };
+		9320F6EA22F860E800E53FE5 /* ReportMarketShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320F6E922F860E800E53FE5 /* ReportMarketShopModel.swift */; };
+		9320F6EC22F8653B00E53FE5 /* cellReportMarketShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320F6EB22F8653B00E53FE5 /* cellReportMarketShop.swift */; };
+		9320F6EE22F8852B00E53FE5 /* GetListShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320F6ED22F8852B00E53FE5 /* GetListShopViewController.swift */; };
 		932222DF22DF827600AC1119 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932222DE22DF827600AC1119 /* RegionModel.swift */; };
 		932222E122DF830400AC1119 /* ProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932222E022DF830400AC1119 /* ProvinceModel.swift */; };
 		932222E322DF836300AC1119 /* DistrictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932222E222DF836300AC1119 /* DistrictModel.swift */; };
@@ -49,6 +52,9 @@
 		932572C522BE8DE800D2961B /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932572C422BE8DE800D2961B /* QRScanViewController.swift */; };
 		9331B6FF22DA35BE0090945B /* SegmentControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331B6FE22DA35BE0090945B /* SegmentControlViewController.swift */; };
 		934214E422D4E777000AB4FF /* UpdateShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934214E322D4E777000AB4FF /* UpdateShopViewController.swift */; };
+		9342C29022F1F54400BC2E83 /* ShopSumaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342C28F22F1F54400BC2E83 /* ShopSumaryViewController.swift */; };
+		9342C29222F1F55A00BC2E83 /* ShopDirectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342C29122F1F55A00BC2E83 /* ShopDirectViewController.swift */; };
+		9342C29422F1F57D00BC2E83 /* ShopSubDealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342C29322F1F57D00BC2E83 /* ShopSubDealerViewController.swift */; };
 		9355C26D22AE06B8005CF89A /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355C26C22AE06B8005CF89A /* CheckInViewController.swift */; };
 		9355C26F22AE0794005CF89A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355C26E22AE0794005CF89A /* BaseViewController.swift */; };
 		9355C27122AE3F2B005CF89A /* DisplayCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355C27022AE3F2B005CF89A /* DisplayCaptureViewController.swift */; };
@@ -148,6 +154,9 @@
 		931B805A22ABA20D00A43653 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		931B805C22AD050100A43653 /* KPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPIViewController.swift; sourceTree = "<group>"; };
 		931B805E22AD073200A43653 /* cellKPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellKPI.swift; sourceTree = "<group>"; };
+		9320F6E922F860E800E53FE5 /* ReportMarketShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMarketShopModel.swift; sourceTree = "<group>"; };
+		9320F6EB22F8653B00E53FE5 /* cellReportMarketShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellReportMarketShop.swift; sourceTree = "<group>"; };
+		9320F6ED22F8852B00E53FE5 /* GetListShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListShopViewController.swift; sourceTree = "<group>"; };
 		932222DE22DF827600AC1119 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
 		932222E022DF830400AC1119 /* ProvinceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceModel.swift; sourceTree = "<group>"; };
 		932222E222DF836300AC1119 /* DistrictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictModel.swift; sourceTree = "<group>"; };
@@ -167,6 +176,9 @@
 		932572C422BE8DE800D2961B /* QRScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
 		9331B6FE22DA35BE0090945B /* SegmentControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlViewController.swift; sourceTree = "<group>"; };
 		934214E322D4E777000AB4FF /* UpdateShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateShopViewController.swift; sourceTree = "<group>"; };
+		9342C28F22F1F54400BC2E83 /* ShopSumaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSumaryViewController.swift; sourceTree = "<group>"; };
+		9342C29122F1F55A00BC2E83 /* ShopDirectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDirectViewController.swift; sourceTree = "<group>"; };
+		9342C29322F1F57D00BC2E83 /* ShopSubDealerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSubDealerViewController.swift; sourceTree = "<group>"; };
 		9355C26C22AE06B8005CF89A /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		9355C26E22AE0794005CF89A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9355C27022AE3F2B005CF89A /* DisplayCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCaptureViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +337,7 @@
 				938B848722CE57EF003399F5 /* cellItemSellout.swift */,
 				932222EA22E21E9900AC1119 /* cellLocation.swift */,
 				93D4487522E311230046F5C5 /* cellPosm.swift */,
+				9320F6EB22F8653B00E53FE5 /* cellReportMarketShop.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -406,6 +419,10 @@
 				93D4487322E306460046F5C5 /* POSMListSelectViewController.swift */,
 				93D4487722E610420046F5C5 /* POSMImageViewController.swift */,
 				93D4487922E765550046F5C5 /* RouterViewController.swift */,
+				9342C28F22F1F54400BC2E83 /* ShopSumaryViewController.swift */,
+				9342C29122F1F55A00BC2E83 /* ShopDirectViewController.swift */,
+				9342C29322F1F57D00BC2E83 /* ShopSubDealerViewController.swift */,
+				9320F6ED22F8852B00E53FE5 /* GetListShopViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,6 +508,7 @@
 				932222E422DF83B300AC1119 /* WardModel.swift */,
 				932222E822DF8F7200AC1119 /* RegionSelectModel.swift */,
 				93D4486F22E2FC200046F5C5 /* POSMModel.swift */,
+				9320F6E922F860E800E53FE5 /* ReportMarketShopModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -652,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9386625122A97684001D5B00 /* UIViewControllerExtensions.swift in Sources */,
+				9342C29022F1F54400BC2E83 /* ShopSumaryViewController.swift in Sources */,
 				932222DF22DF827600AC1119 /* RegionModel.swift in Sources */,
 				9359712622B54FB600B6929A /* ImageListController.swift in Sources */,
 				9386625522A97684001D5B00 /* htpp.swift in Sources */,
@@ -666,6 +685,7 @@
 				9355C26F22AE0794005CF89A /* BaseViewController.swift in Sources */,
 				9359711E22B549AE00B6929A /* DisplayPhotoViewController.swift in Sources */,
 				9386624922A97684001D5B00 /* SVRadialGradientLayer.m in Sources */,
+				9320F6EA22F860E800E53FE5 /* ReportMarketShopModel.swift in Sources */,
 				9355C27F22AE4E79005CF89A /* IDisplay.swift in Sources */,
 				931B051422C674E400FD03A0 /* MenuViewController.swift in Sources */,
 				9359712022B54AC000B6929A /* cellAquaImageDisplay.swift in Sources */,
@@ -682,6 +702,7 @@
 				9355C27522AE494D005CF89A /* cellCateDisplay.swift in Sources */,
 				932572C522BE8DE800D2961B /* QRScanViewController.swift in Sources */,
 				936616B922A95B3F00134937 /* NadoSys.xcdatamodeld in Sources */,
+				9320F6EC22F8653B00E53FE5 /* cellReportMarketShop.swift in Sources */,
 				93F5AC4322BA86C900CC459D /* IDisplayStand.swift in Sources */,
 				934214E422D4E777000AB4FF /* UpdateShopViewController.swift in Sources */,
 				931B804622AA621300A43653 /* ProductModel.swift in Sources */,
@@ -702,6 +723,7 @@
 				93F5AC3F22BA84CF00CC459D /* DisplayStandImageModel.swift in Sources */,
 				931B805222AB78A600A43653 /* LoginController.swift in Sources */,
 				93F5AC2522B5E93D00CC459D /* DataOnlineController.swift in Sources */,
+				9342C29422F1F57D00BC2E83 /* ShopSubDealerViewController.swift in Sources */,
 				93F5AC3B22B9A18700CC459D /* cellCollectData.swift in Sources */,
 				93D4487622E311230046F5C5 /* cellPosm.swift in Sources */,
 				931B805B22ABA20D00A43653 /* MainViewController.swift in Sources */,
@@ -746,6 +768,8 @@
 				931B804A22AB5FAF00A43653 /* KPIModel.swift in Sources */,
 				93149F7D22CA6DE5009792AB /* TabDisplayViewController.swift in Sources */,
 				93D4487822E610420046F5C5 /* POSMImageViewController.swift in Sources */,
+				9320F6EE22F8852B00E53FE5 /* GetListShopViewController.swift in Sources */,
+				9342C29222F1F55A00BC2E83 /* ShopDirectViewController.swift in Sources */,
 				9359712422B54F1900B6929A /* ImageListModel.swift in Sources */,
 				938B848822CE57EF003399F5 /* cellItemSellout.swift in Sources */,
 				931B804222AA5E3300A43653 /* AttandanceModel.swift in Sources */,

@@ -108,14 +108,15 @@ class MainViewController: UIViewController {
     }
     @objc func DoMarketSensing(sender : UITapGestureRecognizer) {
         // Do what you want
-       var objects = _dataOfflineController.GetListKPIs()
-        let obj = objects?.filter{$0.id == 1012}.first
-        if obj != nil {
-             pushViewController(withIdentifier: "frmRouter")
-        }
-        else{
-             pushViewController(withIdentifier: "frmShop")
-        }
+//       var objects = _dataOfflineController.GetListKPIs()
+//        let obj = objects?.filter{$0.id == 1012}.first
+//        if obj != nil {
+//             pushViewController(withIdentifier: "frmRouter")
+//        }
+//        else{
+//             pushViewController(withIdentifier: "frmShop")
+//        }
+        pushViewController(withIdentifier: "frmShopSumary")
       
     }
 

@@ -20,12 +20,18 @@
          contextName = "CreateSellOutViewController.tableView(_:numberOfRowsInSection:):CreateSellOutViewController.swift">
       </ContextState>
       <ContextState
+         contextName = "DisplayPhotoViewController.ditReceiveImageUrl(imgUrl:imgName:imgData:imgType:comment:latitude:longitude:):DisplayPhotoViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "BaseViewController.locationManager(_:didUpdateLocations:):BaseViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.LOCATIONS">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SellOutViewController.getNumberDayfromCurrent():SellOutViewController.swift">
       </ContextState>
       <ContextState
          contextName = "CreateSellOutViewController.tableView(_:cellForRowAt:):CreateSellOutViewController.swift">
@@ -37,12 +43,6 @@
                value = "_listModel[indexPath.row].guid">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SellOutViewController.getNumberDayfromCurrent():SellOutViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "DisplayPhotoViewController.ditReceiveImageUrl(imgUrl:imgName:imgData:imgType:comment:latitude:longitude:):DisplayPhotoViewController.swift">
       </ContextState>
       <ContextState
          contextName = "DisplayItemViewController.updateValue(_:):DisplayItemViewController.swift">
@@ -75,6 +75,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "Http.performRequest(_:requestURL:params:comletion:):htpp.swift">
+      </ContextState>
+      <ContextState
          contextName = "CheckInViewController.viewDidLoad():CheckInViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -86,19 +89,24 @@
          contextName = "DisplayController.InsertModelToDisplay(_:empId:competitorId:):DisplayController.swift">
       </ContextState>
       <ContextState
-         contextName = "DisplayController.getCategoryByCompetitor(_:shopId:empId:):DisplayController.swift">
-      </ContextState>
-      <ContextState
          contextName = "closure #1 in DisplayController.Update(_:):DisplayController.swift">
       </ContextState>
       <ContextState
          contextName = "CreateSellOutViewController.ditReceiveImageUrl(imgUrl:imgName:imgData:imgType:comment:latitude:longitude:):CreateSellOutViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "Http.performRequest(_:requestURL:params:comletion:):htpp.swift">
+         contextName = "DisplayController.getCategoryByCompetitor(_:shopId:empId:):DisplayController.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in closure #1 in ShopProfileViewController.loadShopInfo():ShopProfileViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DataOnlineController.GetShopKeyAccount(_:channelId:type:area:completionHandler:):DataOnlineController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "type">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "ModelListViewController.getModels():ModelListViewController.swift">
