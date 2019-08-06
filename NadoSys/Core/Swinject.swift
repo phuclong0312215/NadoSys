@@ -182,6 +182,18 @@ extension SwinjectStoryboard
             viewController._dataOfflineController = resolveable.resolve(IDataOffline.self)
             viewController._imageListController = resolveable.resolve(IImageList.self)
         }
+        defaultContainer.storyboardInitCompleted(ShopSumaryViewController.self) {
+            resolveable, viewController in
+            viewController._dataOnlineController = resolveable.resolve(IDataOnline.self)
+        }
+        defaultContainer.storyboardInitCompleted(ShopDirectViewController.self) {
+            resolveable, viewController in
+            viewController._dataOnlineController = resolveable.resolve(IDataOnline.self)
+        }
+        defaultContainer.storyboardInitCompleted(ShopSubDealerViewController.self) {
+            resolveable, viewController in
+            viewController._dataOnlineController = resolveable.resolve(IDataOnline.self)
+        }
     }
    
 }

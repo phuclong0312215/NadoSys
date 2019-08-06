@@ -43,6 +43,8 @@ class URLs{
     public static var URL_POSM_GETDATA_STOCK: String = URL + "posm/Get_POSMStock_byDate"
     public static var URL_POSM_CREATE: String = URL + "posm/Create_POSMResult"
     public static var URL_POSM_CREATE_STOCK: String = URL + "posm/Create_POSMStock"
+    public static var URL_REPORT_MARKETSHOP: String = URL + "Reportting/Get_Market_Shop_Summary"
+    public static var URL_ALLSHOPS: String = URL + "shop/allshop"
     
     
     public static var URL_RESGITER: String = URL + "candidate/register"
