@@ -19,6 +19,43 @@ public class DataOnlineController: IDataOnline{
     init() {
         _http = Http()
     }
+    func GetReportEmployeeAvg(_ id: Int,shopId: Int, completionHandler: @escaping ([EmployeeAvgModel]?, String?) -> ()) {
+        let paramaters: Parameters = [
+            "UserId": id,
+            "shopId": shopId
+        ]
+        _http?.performRequest(.get, requestURL: URLs.URL_EMPLOYEE_AVG, params: paramaters as [String : AnyObject]) { (responseJSON) in
+            if(responseJSON != nil){
+                let swiftJSON = JSON(responseJSON)
+                let reports = swiftJSON.object
+                let arrReports = Mapper<EmployeeAvgModel>().mapArray(JSONObject: reports)
+                completionHandler(arrReports, nil)
+            }
+            else{
+                completionHandler(nil,"get shop error.")
+            }
+        }
+    }
+    
+    func GetReportEmployeeAttadance(_ id: Int,shopId: Int,fromDate: String,toDate: String, completionHandler: @escaping ([EmployeeAttModel]?, String?) -> ()) {
+        let paramaters: Parameters = [
+            "EmployeeId": id,
+            "ShopId": shopId,
+            "FromDate": fromDate,
+            "ToDate": toDate
+        ]
+        _http?.performRequest(.get, requestURL: URLs.URL_EMPLOYEE_Attandance, params: paramaters as [String : AnyObject]) { (responseJSON) in
+            if(responseJSON != nil){
+                let swiftJSON = JSON(responseJSON)
+                let reports = swiftJSON.object
+                let arrReports = Mapper<EmployeeAttModel>().mapArray(JSONObject: reports)
+                completionHandler(arrReports, nil)
+            }
+            else{
+                completionHandler(nil,"get shop error.")
+            }
+        }
+    }
     
     func GetShopKeyAccount(_ id: Int,channelId: Int,type: String,area: String,regionId: Int, completionHandler: @escaping ([ShopModel]?, String?) -> ()) {
         var paramaters: Parameters = [

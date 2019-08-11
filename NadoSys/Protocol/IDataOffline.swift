@@ -10,9 +10,11 @@ import Foundation
 protocol IDataOffline {
     func InsertShops(_ list: [ShopModel],empId: Int)
     func InsertProducts(_ list: [ProductModel])
+    func InsertSuppliers(_ list: [SupplierModel])
     func InsertKPIs(_ list: [KPIModel])
     func InsertObjectDatas(_ list: [ObjectDataModel])
     func InsertDisplayGuides(_ list: [DisplayGuideModel])
+    func GetListSuppliers() -> [SupplierModel]? 
     func GetListShops(_ empId: Int) -> [ShopModel]?
     func GetListKPIs() -> [KPIModel]?
     func GetListRegions() -> [RegionModel]?

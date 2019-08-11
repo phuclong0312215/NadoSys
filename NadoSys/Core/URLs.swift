@@ -38,6 +38,7 @@ class URLs{
     
     public static var URL_ATTANDANCE_SAVE: String = URL + "attendance/uploadandroid"
     public static var URL_SHOP_PROFILE: String = URL + "shop/getShop"
+    public static var URL_EMPLOYEE_SHOP_PROFILE: String = URL + "shop/getShop"
     public static var URL_POSM_GETDATA: String = URL + "posm/Get_POSMList_byEmployee"
     public static var URL_POSM_GETDATA_RESULT: String = URL + "posm/Get_POSMResult_byDate"
     public static var URL_POSM_GETDATA_STOCK: String = URL + "posm/Get_POSMStock_byDate"
@@ -45,7 +46,8 @@ class URLs{
     public static var URL_POSM_CREATE_STOCK: String = URL + "posm/Create_POSMStock"
     public static var URL_REPORT_MARKETSHOP: String = URL + "Reportting/Get_Market_Shop_Summary"
     public static var URL_ALLSHOPS: String = URL + "shop/allshop"
-    
+    public static var URL_EMPLOYEE_AVG: String = URL + "Reportting/Get_Average_byShop"
+    public static var URL_EMPLOYEE_Attandance: String = URL + "Attendance/byshop"
     
     public static var URL_RESGITER: String = URL + "candidate/register"
     public static var URL_CV: String = URL + "candidate/info"
