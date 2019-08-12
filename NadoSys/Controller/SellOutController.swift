@@ -8,7 +8,7 @@
 
 import Foundation
 import MagicalRecord
-public class SellOutController: ISellOut{
+public class SellOutController: ISellOut {
     
     var _dataOfflineController: IDataOffline
     init(dataOfflineController: IDataOffline) {
@@ -22,7 +22,8 @@ public class SellOutController: ISellOut{
         let predicate1 = NSPredicate(format: "shopId = '\(shopId)'")
         let predicate2 = NSPredicate(format: "employeeId = '\(empId)'")
         let predicate3 = NSPredicate(format: "objId = '\(objId)'")
-        var predicateCompound = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate,predicate1,predicate2,predicate3])
+        let predicate4 = NSPredicate(format: "productId <> -1")
+        var predicateCompound = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate,predicate1,predicate2,predicate3,predicate4])
         
         if let sellouts = SellOut.mr_findAllSorted(by: "id",ascending: true,with: predicateCompound, in: context) as? [SellOut]{
             for entity in sellouts {
@@ -68,6 +69,60 @@ public class SellOutController: ISellOut{
         return nil
     }
     
+    // Hưng thêm
+    func GetNosell(_ shopId: Int, empId: Int, saleDate: String, objId: Int) -> [SellOutModel]? {
+        var results = [SellOutModel]()
+        let context = NSManagedObjectContext.mr_()
+        let predicate = NSPredicate(format: "saleDate = '\(saleDate)'")
+        let predicate1 = NSPredicate(format: "shopId = '\(shopId)'")
+        let predicate2 = NSPredicate(format: "employeeId = '\(empId)'")
+        let predicate3 = NSPredicate(format: "objId = '\(objId)'")
+        let predicate4 = NSPredicate(format: "productId = -1")
+        var predicateCompound = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate,predicate1,predicate2,predicate3,predicate4])
+        
+        if let sellouts = SellOut.mr_findAllSorted(by: "id",ascending: true,with: predicateCompound, in: context) as? [SellOut]{
+            for entity in sellouts {
+                let model = SellOutModel()
+                model.productId = Int(entity.productId)
+                model.id = Int(entity.id)
+                model.employeeId = Int(entity.employeeId)
+                if let orderCode = entity.orderCode{
+                    model.orderCode = orderCode
+                }
+                model.blockStatus = Int(entity.blockStatus)
+                model.price = entity.price
+                model.qty = Int(entity.qty)
+                model.dealerId = Int(entity.dealerId)
+                model.shopId = Int(entity.shopId)
+                if let cusPhone = entity.cusPhone{
+                    model.cusPhone = cusPhone
+                }
+                if let cusName = entity.cusName{
+                    model.cusName = cusName
+                }
+                if let cusAdd = entity.cusAdd{
+                    model.cusAdd = cusAdd
+                }
+                if let saleDate = entity.saleDate{
+                    model.saleDate = saleDate
+                }
+                if let createdDate = entity.createdDate{
+                    model.createDate = createdDate
+                }
+                if let m = entity.model{
+                    model.model = m
+                }
+                if let barcode = entity.barcode{
+                    model.barcode = barcode
+                }
+                model.changed = Int(entity.changed)
+                model.objId = Int(entity.objId)
+                results.append(model)
+            }
+                return results
+        }
+        return nil
+    }
     func Insert(_ list: [SellOutModel]) {
         MagicalRecord.save({ (context) in
             for model in list {

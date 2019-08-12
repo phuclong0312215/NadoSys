@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vo6-jW-QNT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vo6-jW-QNT">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -225,7 +225,7 @@
                                             <constraint firstAttribute="height" constant="64" id="pfD-sH-BaR"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsf-dq-fK1">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsf-dq-fK1">
                                         <rect key="frame" x="16" y="144" width="288" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Internal Operation Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2b-f5-HJQ">
@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="height" constant="64" id="QeV-Ab-GDA"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpN-rn-olj">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpN-rn-olj">
                                         <rect key="frame" x="16" y="224" width="288" height="64"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_team" translatesAutoresizingMaskIntoConstraints="NO" id="FLJ-xQ-NIf">
@@ -265,7 +265,7 @@
                                             <constraint firstAttribute="height" constant="64" id="9BZ-Ce-wRB"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="up0-o8-f8d">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="up0-o8-f8d">
                                         <rect key="frame" x="16" y="304" width="288" height="64"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_training" translatesAutoresizingMaskIntoConstraints="NO" id="2a2-Lb-A8w">
@@ -2202,19 +2202,29 @@
                                     <constraint firstItem="N4e-Qz-jWT" firstAttribute="leading" secondItem="clT-5Z-cRN" secondAttribute="leading" constant="8" id="yTX-mC-2Ep"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqF-p1-dSt">
+                                <rect key="frame" x="0.0" y="120" width="320" height="392"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="616-Jl-huC" firstAttribute="trailing" secondItem="RqF-p1-dSt" secondAttribute="trailing" id="6xt-s7-U8A"/>
                             <constraint firstItem="NsK-sx-Bbd" firstAttribute="trailing" secondItem="616-Jl-huC" secondAttribute="trailing" id="ENw-bm-MjQ"/>
                             <constraint firstItem="clT-5Z-cRN" firstAttribute="leading" secondItem="616-Jl-huC" secondAttribute="leading" id="L8q-yQ-3GQ"/>
                             <constraint firstItem="clT-5Z-cRN" firstAttribute="top" secondItem="NsK-sx-Bbd" secondAttribute="bottom" id="SqO-qi-H2t"/>
                             <constraint firstItem="gEj-PR-srZ" firstAttribute="top" secondItem="616-Jl-huC" secondAttribute="top" id="Z9e-XK-SSs"/>
+                            <constraint firstItem="RqF-p1-dSt" firstAttribute="leading" secondItem="616-Jl-huC" secondAttribute="leading" id="ZUc-HL-fzT"/>
                             <constraint firstItem="clT-5Z-cRN" firstAttribute="trailing" secondItem="616-Jl-huC" secondAttribute="trailing" id="dNq-Ln-mpw"/>
                             <constraint firstItem="NsK-sx-Bbd" firstAttribute="top" secondItem="gEj-PR-srZ" secondAttribute="bottom" id="iOe-OI-x9l"/>
                             <constraint firstItem="clT-5Z-cRN" firstAttribute="bottom" secondItem="616-Jl-huC" secondAttribute="bottom" id="jIV-uU-p6g"/>
                             <constraint firstItem="gEj-PR-srZ" firstAttribute="trailing" secondItem="616-Jl-huC" secondAttribute="trailing" id="u30-sc-eV7"/>
                             <constraint firstItem="gEj-PR-srZ" firstAttribute="leading" secondItem="616-Jl-huC" secondAttribute="leading" id="ukS-98-Dp3"/>
+                            <constraint firstItem="clT-5Z-cRN" firstAttribute="top" secondItem="RqF-p1-dSt" secondAttribute="bottom" id="vGo-WB-1jv"/>
                             <constraint firstItem="NsK-sx-Bbd" firstAttribute="leading" secondItem="616-Jl-huC" secondAttribute="leading" id="wK5-Lp-9Pe"/>
+                            <constraint firstItem="RqF-p1-dSt" firstAttribute="top" secondItem="gEj-PR-srZ" secondAttribute="bottom" id="xhR-JG-amh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="616-Jl-huC"/>
                     </view>
@@ -2223,6 +2233,7 @@
                         <outlet property="btnAdd" destination="nY7-lb-OuT" id="O1N-pC-uoq"/>
                         <outlet property="labelCount" destination="N4e-Qz-jWT" id="YfA-4n-01X"/>
                         <outlet property="labelPrice" destination="MXz-HX-N4p" id="3YH-KE-Lvz"/>
+                        <outlet property="lblNodata" destination="RqF-p1-dSt" id="NGT-aq-fSI"/>
                         <outlet property="myCollect" destination="XVk-Ce-6nQ" id="wud-qv-5t4"/>
                         <outlet property="myTable" destination="NsK-sx-Bbd" id="fI5-Hz-VAO"/>
                         <segue destination="SkQ-ke-6dY" kind="push" id="2G4-3g-dL0"/>

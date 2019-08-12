@@ -123,6 +123,12 @@ class CheckInViewController: UIViewController,cameraProtocol,CLLocationManagerDe
             labelFieldOfficer.text = "\(username)"
         }
         labelTimeVisit.text = Date().toLongTimeStringUpload()
+        
+        loadattendance();
+        // Do any additional setup after loading the view.
+    }
+    func loadattendance() {
+      
         let attandance = _attandanceController.GetByType(_shopId!, empId: (_login?.employeeId)!, attandanceDate: Date().toShortTimeString(), aType: _type)
         if attandance != nil {
             let path = Function.getPath((attandance?.photo)!)
@@ -135,7 +141,6 @@ class CheckInViewController: UIViewController,cameraProtocol,CLLocationManagerDe
                 labelAttendance.text = "Giờ ra: "  + (attandance?.createddate.split(separator: " ")[1])!
             }
         }
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func CheckIn(_ sender: Any) {

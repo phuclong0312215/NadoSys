@@ -18,10 +18,14 @@ class PopupSelloutViewController: UIViewController {
     @IBOutlet weak var checkYes: BEMCheckBox!
     @IBOutlet weak var checkNo: BEMCheckBox!
     var delegate: nosellDelegate?
+    var delegate_sellOut: delegateSellOut?
     var alert = UIAlertController()
     var bemGroup: BEMCheckBoxGroup = BEMCheckBoxGroup()
     var _login = Defaults.getUser(key: "LOGIN")
     var _shopId = Int(Preferences.get(key: "SHOPID"))
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkYes.boxType = .circle
@@ -53,6 +57,7 @@ class PopupSelloutViewController: UIViewController {
                         self.view.makeToast("Lưu thành công")
                         self.removeAnimate()
                         self.delegate?.disableAddSellout()
+                        self.delegate_sellOut?.refresh();
                     }
                 })
             })
@@ -66,8 +71,18 @@ class PopupSelloutViewController: UIViewController {
                 self.alert.view.superview?.subviews.first?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.actionSheetBackgroundTapped)))
             }
         }
-        else{
+        else  if checkYes.on == true{
             removeAnimate()
+            
+            //Hưng thêm, chuyển trang qua thêm sell
+            
+            let controller = storyboard?.instantiateViewController(withIdentifier:"frmCreateSellOut") as! CreateSellOutViewController
+            controller.delegate = delegate_sellOut
+            controller._type = "SELLOUT"
+            if let viewController = self.navigationController{
+                viewController.pushViewController(controller, animated: true)
+            }
+            
         }
         //        if checkNo.on == true {
         //            guard(self.navigationController?.popViewController(animated: true)) != nil
@@ -171,3 +186,4 @@ class PopupSelloutViewController: UIViewController {
     */
 
 }
+

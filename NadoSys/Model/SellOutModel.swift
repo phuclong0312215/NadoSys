@@ -31,6 +31,7 @@ public class SellOutModel: NSObject, Mappable,Codable{
     var shopId: Int = 0
     var dealerId: Int = 0
     var saleDate: String = ""
+    var saleDate2: String = ""
     var employeeId: Int = 0
     var blockStatus: Int = 0
     public func mapping(map: Map) {
@@ -49,6 +50,7 @@ public class SellOutModel: NSObject, Mappable,Codable{
         productId    <- map["productId"]
         dealerId    <- map["dealerId"]
         saleDate    <- map["saleDate"]
+        saleDate2    <- map["saleDate2"]
         productName    <- map["productName"]
         employeeId    <- map["employeeId"]
         shopId    <- map["shopId"]

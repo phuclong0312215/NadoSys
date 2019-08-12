@@ -9,6 +9,7 @@
 import Foundation
 protocol ISellOut{
      func GetList(_ shopId: Int,empId: Int,saleDate: String,objId: Int) -> [SellOutModel]?
+      func GetNosell(_ shopId: Int,empId: Int,saleDate: String,objId: Int) -> [SellOutModel]?
      func Insert(_ list: [SellOutModel])
 }
 

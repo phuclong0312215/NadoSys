@@ -154,7 +154,7 @@ public class DataOfflineController: IDataOffline{
     func InsertSellOut(_ list: [SellOutModel]) {
         MagicalRecord.save({ (context) in
             for model in list {
-                if !self.IsSellOutExists(model.shopId, empId: model.employeeId, saleDate: model.saleDate, objId: model.objId, productId: model.productId){
+                if !self.IsSellOutExists(model.shopId, empId: model.employeeId, saleDate: model.saleDate2, objId: model.objId, productId: model.productId){
                     if let entity = SellOut.mr_createEntity(in: context){
                         entity.shopId = Int32(model.shopId)
                         entity.productId = Int32(model.productId)
@@ -162,8 +162,9 @@ public class DataOfflineController: IDataOffline{
                         entity.cusName = model.cusName
                         entity.cusPhone = model.cusPhone
                         entity.model = model.model
+                        entity.qty = Int32(model.qty)
                         entity.employeeId = Int32(model.employeeId)
-                        entity.saleDate = model.saleDate
+                        entity.saleDate = model.saleDate2
                         entity.createdDate = model.createDate
                         entity.dealerId = Int32(model.dealerId)
                         entity.qty = Int32(model.qty)
@@ -262,7 +263,7 @@ public class DataOfflineController: IDataOffline{
     
     func InsertShops(_ list: [ShopModel],empId: Int) {
         MagicalRecord.save({ (context) in
-           // Shops.mr_truncateAll(in: context)
+             Shops.mr_truncateAll(in: context)
             for model in list {
                 if let entity = Shops.mr_createEntity(in: context){
                     entity.id = Int32(model.id)

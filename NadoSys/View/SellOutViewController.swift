@@ -9,7 +9,7 @@
 import UIKit
 
 class SellOutViewController: UIViewController {
-
+    
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var myTable: UITableView!
     @IBOutlet weak var labelCount: UILabel!
@@ -21,6 +21,10 @@ class SellOutViewController: UIViewController {
     var _login = Defaults.getUser(key: "LOGIN")
     var _shopId = Int(Preferences.get(key: "SHOPID"))
     var _imageType = 0
+    
+    //Hưng thêm
+    @IBOutlet weak var lblNodata: UILabel!
+    
     let _type = Preferences.get(key: "SALETYPE")
     @IBOutlet weak var myCollect: UICollectionView!
     override func viewDidLoad() {
@@ -46,10 +50,8 @@ class SellOutViewController: UIViewController {
         getNumberDayfromCurrent()
         loadData(Date())
         addRightButton()
-        if _type == "SELLOUT"{
-            showPopup()
-        }
-       
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -80,6 +82,9 @@ class SellOutViewController: UIViewController {
             let popup = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopupSellout") as! PopupSelloutViewController
             self.addChild(popup)
             popup.delegate = self
+            //Hưng thêm
+            popup.delegate_sellOut = self
+            
             popup.view.frame = self.view.frame
             self.view.addSubview(popup.view)
             popup.didMove(toParent: self)
@@ -94,19 +99,40 @@ class SellOutViewController: UIViewController {
     }
     
     func loadData(_ date: Date){
-        _listSellout = _sellOutController.GetList(_shopId!, empId: (_login?.employeeId)!, saleDate: date.toShortTimeString(),objId: _imageType)!
-        labelCount.text = "Số lượng: \(_listSellout.reduce(0,{$0 + $1.qty}))"
-        let total = _listSellout.reduce(0, {$0 + Double($1.qty)*$1.price})
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        let price = numberFormatter.string(from: NSNumber(value: total))
-        labelPrice.text = "Thành tiền: \(price!)"
-        myTable.reloadData()
-        if date.toShortTimeString() == Date().toShortTimeString(){
-            btnAdd.isHidden = false
+        
+        var nosell = _sellOutController.GetNosell(_shopId!, empId: (_login?.employeeId)!, saleDate: date.toShortTimeString(), objId: _imageType)
+        
+        if(nosell != nil && nosell!.count>0){
+            lblNodata.isHidden=false;
+            lblNodata.text="NO SELL";
+            btnAdd.isHidden = true
         }
         else{
-            btnAdd.isHidden = true
+            _listSellout = _sellOutController.GetList(_shopId!, empId: (_login?.employeeId)!, saleDate: date.toShortTimeString(),objId: _imageType)!
+            labelCount.text = "Số lượng: \(_listSellout.reduce(0,{$0 + $1.qty}))"
+            let total = _listSellout.reduce(0, {$0 + Double($1.qty)*$1.price})
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = NumberFormatter.Style.decimal
+            let price = numberFormatter.string(from: NSNumber(value: total))
+            labelPrice.text = "Thành tiền: \(price!)"
+            myTable.reloadData()
+            
+            //Hưng thêm
+             lblNodata.text="Không có dữ liệu ";
+            if(_listSellout.count>0){
+                lblNodata.isHidden=true;
+            }else{
+                lblNodata.isHidden = false;
+            }
+            
+            
+            if date.toShortTimeString() == Date().toShortTimeString(){
+                btnAdd.isHidden = false
+            }
+            else{
+                btnAdd.isHidden = true
+            }
+            
         }
     }
     
@@ -120,26 +146,31 @@ class SellOutViewController: UIViewController {
         _listDay = _listDay.reversed()
         updateUI()
     }
-
-  
+    
+    
     @IBAction func create(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier:"frmCreateSellOut") as! CreateSellOutViewController
-        controller.delegate = self
-        controller._type = _type
-        if let viewController = self.navigationController{
-            viewController.pushViewController(controller, animated: true)
+        if _type == "SELLOUT"{
+            showPopup()
+        }
+        else{
+            let controller = storyboard?.instantiateViewController(withIdentifier:"frmCreateSellOut") as! CreateSellOutViewController
+            controller.delegate = self
+            controller._type = _type
+            if let viewController = self.navigationController{
+                viewController.pushViewController(controller, animated: true)
+            }
         }
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 extension SellOutViewController: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     
