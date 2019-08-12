@@ -71,7 +71,7 @@ extension KPIViewController: UICollectionViewDataSource,UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let function = _listKPIs[indexPath.row].id
-        if function != 1 && function != 8 && function != 3 && function != 1011 && function != 2 {
+        if function != 1 && function != 8 && function != 3 && function != 1011  {
             let attandance = _attandanceController.GetByType(_shopId!, empId: (_login?.employeeId)!, attandanceDate: Date().toShortTimeString(), aType: "IN")
             if attandance == nil {
                 Function.Message("Thông báo", message: "Vui lòng chấm công vào trước khi thực hiện báo cáo này")
