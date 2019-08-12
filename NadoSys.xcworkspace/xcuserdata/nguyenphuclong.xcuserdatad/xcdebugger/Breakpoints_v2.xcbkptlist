@@ -58,12 +58,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "587230396.170754"
+                  timestampString = "587324424.188574"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
                   endingLineNumber = "152"
-                  offsetFromSymbolStart = "301">
+                  offsetFromSymbolStart = "276">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,7 +73,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "587230396.1810679"
+                  timestampString = "587324424.192812"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
@@ -170,12 +170,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "587230396.456033"
+                  timestampString = "587324424.233628"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "144">
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,12 +185,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "587230396.459757"
+                  timestampString = "587324424.237902"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "3853">
+                  offsetFromSymbolStart = "3100">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -225,6 +225,38 @@
             endingLineNumber = "52"
             landmarkName = "Confirm(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NadoSys.PopupSelloutViewController.Confirm(Any) -&gt; ()"
+                  moduleName = "NadoSys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/Popup/PopupSelloutViewController.swift"
+                  timestampString = "587324424.253276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in NadoSys.PopupSelloutViewController.Confirm(Any) -&gt; ()"
+                  moduleName = "NadoSys"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/Popup/PopupSelloutViewController.swift"
+                  timestampString = "587324424.256511"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -234,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NadoSys/View/SellOutViewController.swift"
-            timestampString = "587230396.061173"
+            timestampString = "587312769.0038739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"

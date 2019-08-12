@@ -30,6 +30,9 @@
 		931B805B22ABA20D00A43653 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B805A22ABA20D00A43653 /* MainViewController.swift */; };
 		931B805D22AD050100A43653 /* KPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B805C22AD050100A43653 /* KPIViewController.swift */; };
 		931B805F22AD073200A43653 /* cellKPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B805E22AD073200A43653 /* cellKPI.swift */; };
+		931DC7642301B1F800D102D2 /* cellEmployeeAtt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DC7632301B1F800D102D2 /* cellEmployeeAtt.swift */; };
+		931DC7662301B39F00D102D2 /* collecEmpAtt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DC7652301B39E00D102D2 /* collecEmpAtt.swift */; };
+		931DC7682301CDF200D102D2 /* cellDisplayFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DC7672301CDF200D102D2 /* cellDisplayFix.swift */; };
 		9320F6EA22F860E800E53FE5 /* ReportMarketShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320F6E922F860E800E53FE5 /* ReportMarketShopModel.swift */; };
 		9320F6EC22F8653B00E53FE5 /* cellReportMarketShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320F6EB22F8653B00E53FE5 /* cellReportMarketShop.swift */; };
 		9320F6EE22F8852B00E53FE5 /* GetListShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320F6ED22F8852B00E53FE5 /* GetListShopViewController.swift */; };
@@ -159,6 +162,9 @@
 		931B805A22ABA20D00A43653 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		931B805C22AD050100A43653 /* KPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPIViewController.swift; sourceTree = "<group>"; };
 		931B805E22AD073200A43653 /* cellKPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellKPI.swift; sourceTree = "<group>"; };
+		931DC7632301B1F800D102D2 /* cellEmployeeAtt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellEmployeeAtt.swift; sourceTree = "<group>"; };
+		931DC7652301B39E00D102D2 /* collecEmpAtt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collecEmpAtt.swift; sourceTree = "<group>"; };
+		931DC7672301CDF200D102D2 /* cellDisplayFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellDisplayFix.swift; sourceTree = "<group>"; };
 		9320F6E922F860E800E53FE5 /* ReportMarketShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMarketShopModel.swift; sourceTree = "<group>"; };
 		9320F6EB22F8653B00E53FE5 /* cellReportMarketShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellReportMarketShop.swift; sourceTree = "<group>"; };
 		9320F6ED22F8852B00E53FE5 /* GetListShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListShopViewController.swift; sourceTree = "<group>"; };
@@ -348,6 +354,9 @@
 				932222EA22E21E9900AC1119 /* cellLocation.swift */,
 				93D4487522E311230046F5C5 /* cellPosm.swift */,
 				9320F6EB22F8653B00E53FE5 /* cellReportMarketShop.swift */,
+				931DC7632301B1F800D102D2 /* cellEmployeeAtt.swift */,
+				931DC7652301B39E00D102D2 /* collecEmpAtt.swift */,
+				931DC7672301CDF200D102D2 /* cellDisplayFix.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -717,7 +726,9 @@
 				9386624922A97684001D5B00 /* SVRadialGradientLayer.m in Sources */,
 				9320F6EA22F860E800E53FE5 /* ReportMarketShopModel.swift in Sources */,
 				9355C27F22AE4E79005CF89A /* IDisplay.swift in Sources */,
+				931DC7682301CDF200D102D2 /* cellDisplayFix.swift in Sources */,
 				931B051422C674E400FD03A0 /* MenuViewController.swift in Sources */,
+				931DC7662301B39F00D102D2 /* collecEmpAtt.swift in Sources */,
 				9359712022B54AC000B6929A /* cellAquaImageDisplay.swift in Sources */,
 				932572B322BD16A600D2961B /* cellCollectDate.swift in Sources */,
 				9386624E22A97684001D5B00 /* UserDefault.swift in Sources */,
@@ -730,6 +741,7 @@
 				9386622F22A97672001D5B00 /* BEMCheckBox.m in Sources */,
 				9386625B22A978C2001D5B00 /* PhotoModel.swift in Sources */,
 				9355C27522AE494D005CF89A /* cellCateDisplay.swift in Sources */,
+				931DC7642301B1F800D102D2 /* cellEmployeeAtt.swift in Sources */,
 				932572C522BE8DE800D2961B /* QRScanViewController.swift in Sources */,
 				936616B922A95B3F00134937 /* NadoSys.xcdatamodeld in Sources */,
 				9320F6EC22F8653B00E53FE5 /* cellReportMarketShop.swift in Sources */,

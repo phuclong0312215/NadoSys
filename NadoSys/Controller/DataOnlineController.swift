@@ -19,6 +19,26 @@ public class DataOnlineController: IDataOnline{
     init() {
         _http = Http()
     }
+    func GetReportDisplayFix(_ id: Int,shopId: Int,fromDate: String,toDate: String, completionHandler: @escaping ([DisplayFixModel]?, String?) -> ()) {
+        let paramaters: Parameters = [
+            "UserId": id,
+            "ShopId": shopId,
+            "FromDate": fromDate,
+            "ToDate": toDate
+        ]
+        _http?.performRequest(.get, requestURL: URLs.URL_DISPLAY_FIX, params: paramaters as [String : AnyObject]) { (responseJSON) in
+            if(responseJSON != nil){
+                let swiftJSON = JSON(responseJSON)
+                let reports = swiftJSON.object
+                let arrReports = Mapper<DisplayFixModel>().mapArray(JSONObject: reports)
+                completionHandler(arrReports, nil)
+            }
+            else{
+                completionHandler(nil,"get shop error.")
+            }
+        }
+    }
+    
     func GetReportEmployeeAvg(_ id: Int,shopId: Int, completionHandler: @escaping ([EmployeeAvgModel]?, String?) -> ()) {
         let paramaters: Parameters = [
             "UserId": id,

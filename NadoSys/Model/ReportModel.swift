@@ -33,6 +33,28 @@ public class EmployeeAvgModel: NSObject, Mappable,Codable{
     }
     
 }
+public class DisplayFixModel: NSObject, Mappable,Codable{
+    required convenience public init?(map: Map) {
+        self.init()
+    }
+    
+    var objectId: Int = 0
+    var objectType: String = ""
+    var objectName: String = ""
+    var quantity: Int = 0
+    var noofShop: Int = 0
+    var sortby: Int = 0
+    
+    public func mapping(map: Map) {
+        objectId    <- map["objectId"]
+        objectType    <- map["objectType"]
+        objectName    <- map["objectName"]
+        quantity    <- map["quantity"]
+        noofShop    <- map["noofShop"]
+        sortby    <- map["sortby"]
+    }
+    
+}
 public class EmployeeAttModel: NSObject, Mappable,Codable{
     required convenience public init?(map: Map) {
         self.init()
