@@ -34,13 +34,13 @@ class MenuViewController: UIViewController {
         // Do any additional setup after loading the view.
         if _login != nil{
             lblName.text = "Welcome, " + _login!.employeeName
-            
-        }
+        }else {lblName.text = "Welcome, " ;}
     }
     
 
     @IBOutlet weak var refreshData: UIImageView!
     @IBOutlet weak var logout: UIImageView!
+    
     @objc func logoutApp(){
          Defaults.clearUserData(key: "LOGIN")
          self.performSegue(withIdentifier: "sw_login", sender: self)

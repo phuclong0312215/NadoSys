@@ -100,6 +100,7 @@ class SellOutViewController: UIViewController {
     
     func loadData(_ date: Date){
         
+        //Hưng thêm
         var nosell = _sellOutController.GetNosell(_shopId!, empId: (_login?.employeeId)!, saleDate: date.toShortTimeString(), objId: _imageType)
         
         if(nosell != nil && nosell!.count>0){
@@ -107,6 +108,8 @@ class SellOutViewController: UIViewController {
             lblNodata.text="NO SELL";
             btnAdd.isHidden = true
         }
+            //end
+            
         else{
             _listSellout = _sellOutController.GetList(_shopId!, empId: (_login?.employeeId)!, saleDate: date.toShortTimeString(),objId: _imageType)!
             labelCount.text = "Số lượng: \(_listSellout.reduce(0,{$0 + $1.qty}))"
@@ -124,7 +127,7 @@ class SellOutViewController: UIViewController {
             }else{
                 lblNodata.isHidden = false;
             }
-            
+            //end
             
             if date.toShortTimeString() == Date().toShortTimeString(){
                 btnAdd.isHidden = false
@@ -149,7 +152,7 @@ class SellOutViewController: UIViewController {
     
     
     @IBAction func create(_ sender: Any) {
-        if _type == "SELLOUT"{
+        if _type == "SELLOUT" && _listSellout.count == 0{
             showPopup()
         }
         else{
