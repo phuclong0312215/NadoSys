@@ -93,7 +93,7 @@ extension MenuViewController: UITableViewDelegate,UITableViewDataSource{
             performSegue(withIdentifier: "sw_posm",sender: self)
             break
         default:
-            Function.Message("Info", message: "Comming soon")
+             performSegue(withIdentifier: "sw_dashboard",sender: self)
             break
         }
     }

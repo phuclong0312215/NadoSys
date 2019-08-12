@@ -58,12 +58,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "586718386.175985"
+                  timestampString = "587230396.170754"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
                   endingLineNumber = "152"
-                  offsetFromSymbolStart = "276">
+                  offsetFromSymbolStart = "301">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,7 +73,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "586718386.180052"
+                  timestampString = "587230396.1810679"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
@@ -111,8 +111,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "337"
             endingLineNumber = "337"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "toJson(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,12 +170,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "586718386.218503"
+                  timestampString = "587230396.456033"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "112">
+                  offsetFromSymbolStart = "144">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,12 +185,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "586718386.222085"
+                  timestampString = "587230396.459757"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "3100">
+                  offsetFromSymbolStart = "3853">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -207,8 +207,72 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "246"
             endingLineNumber = "246"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "setData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NadoSys/Popup/PopupSelloutViewController.swift"
+            timestampString = "587230396.060995"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "Confirm(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NadoSys/View/SellOutViewController.swift"
+            timestampString = "587230396.061173"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NadoSys/Controller/DataOfflineController.swift"
+            timestampString = "587230396.061269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "InsertSellOut(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NadoSys/Controller/DataOfflineController.swift"
+            timestampString = "587230399.341889"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "InsertSellOut(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

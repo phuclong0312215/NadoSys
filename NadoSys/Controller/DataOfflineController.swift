@@ -62,6 +62,8 @@ public class DataOfflineController: IDataOffline{
                 let displayguides = swiftJSON["display"].object
                 let objectDatas = swiftJSON["objectData"].object
                 let shops = swiftJSON["shop"].object
+                let supplier = swiftJSON["supplier"].object
+                let sell7day = swiftJSON["sell7day"].object
                 let arrKpi = Mapper<KPIModel>().mapArray(JSONObject: kpis)
                 self.InsertKPIs(arrKpi!)
                 let arrProduct = Mapper<ProductModel>().mapArray(JSONObject: products)
@@ -72,6 +74,10 @@ public class DataOfflineController: IDataOffline{
                 self.InsertObjectDatas(arrObjectDatas!)
                 let arrShops = Mapper<ShopModel>().mapArray(JSONObject: shops)
                 self.InsertShops(arrShops!,empId: (_login?.employeeId)!)
+                let arrSuppliers = Mapper<SupplierModel>().mapArray(JSONObject: supplier)
+                self.InsertSuppliers(arrSuppliers!)
+                let arrSell7days = Mapper<SellOutModel>().mapArray(JSONObject: sell7day)
+                self.InsertSellOut(arrSell7days!)
                 //SVProgressHUD.dismiss()
                 completionHandler(true)
             }
@@ -145,6 +151,50 @@ public class DataOfflineController: IDataOffline{
         }
     }
     
+    func InsertSellOut(_ list: [SellOutModel]) {
+        MagicalRecord.save({ (context) in
+            for model in list {
+                if !self.IsSellOutExists(model.shopId, empId: model.employeeId, saleDate: model.saleDate, objId: model.objId, productId: model.productId){
+                    if let entity = SellOut.mr_createEntity(in: context){
+                        entity.shopId = Int32(model.shopId)
+                        entity.productId = Int32(model.productId)
+                        entity.cusAdd = model.cusAdd
+                        entity.cusName = model.cusName
+                        entity.cusPhone = model.cusPhone
+                        entity.model = model.model
+                        entity.employeeId = Int32(model.employeeId)
+                        entity.saleDate = model.saleDate
+                        entity.createdDate = model.createDate
+                        entity.dealerId = Int32(model.dealerId)
+                        entity.qty = Int32(model.qty)
+                        entity.blockStatus = Int32(model.blockStatus)
+                        entity.price = model.price
+                        entity.objId = Int32(model.objId)
+                        entity.orderCode = model.orderCode
+                        entity.id =  Int32(SellOut.mr_countOfEntities() + 1)
+                        entity.changed = 0
+                    }
+                }
+            }
+        })
+    }
+    
+    func IsSellOutExists(_ shopId: Int,empId: Int,saleDate: String,objId: Int,productId: Int) -> Bool {
+        var results = [SellOutModel]()
+        let context = NSManagedObjectContext.mr_()
+        let predicate = NSPredicate(format: "saleDate = '\(saleDate)'")
+        let predicate1 = NSPredicate(format: "shopId = '\(shopId)'")
+        let predicate2 = NSPredicate(format: "employeeId = '\(empId)'")
+        let predicate3 = NSPredicate(format: "objId = '\(objId)'")
+        let predicate4 = NSPredicate(format: "productId = '\(productId)'")
+        var predicateCompound = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate,predicate1,predicate2,predicate3,predicate4])
+        
+        if let sellouts = SellOut.mr_findFirst(with: predicateCompound, in: context) as? SellOut{
+            return true
+        }
+        return false
+    }
+    
     func InsertWards(_ list: [WardModel]) {
         MagicalRecord.save({ (context) in
             // Shops.mr_truncateAll(in: context)
@@ -160,6 +210,7 @@ public class DataOfflineController: IDataOffline{
             }
         })
     }
+    
     
     func InsertDistricts(_ list: [DistrictModel]) {
         MagicalRecord.save({ (context) in
@@ -229,6 +280,28 @@ public class DataOfflineController: IDataOffline{
             }
         })
     }
+    
+    func InsertSuppliers(_ list: [SupplierModel]) {
+        MagicalRecord.save({ (context) in
+            Supplier.mr_truncateAll(in: context)
+            for model in list {
+                if let entity = Supplier.mr_createEntity(in: context){
+                    entity.supplierId = Int32(model.supplierId)
+                    entity.address = model.address
+                    entity.area = model.area
+                    entity.districtId = Int32(model.districtId)
+                    entity.wardId = Int32(model.wardId)
+                    entity.regionId = Int32(model.wardId)
+                    entity.provinceId = Int32(model.provinceId)
+                    entity.createdDate = model.createdDate
+                    entity.supplierCode = model.supplierCode
+                    entity.supplierName = model.supplierName
+                }
+                
+            }
+        })
+    }
+    
     
     func InsertProducts(_ list: [ProductModel]) {
         MagicalRecord.save({ (context) in
@@ -336,11 +409,44 @@ public class DataOfflineController: IDataOffline{
         })
     }
     
+    func GetListSuppliers() -> [SupplierModel]? {
+        var results = [SupplierModel]()
+        let context = NSManagedObjectContext.mr_()
+        if let objs = Supplier.mr_findAll(in: context) as? [Supplier]{
+            for entity in objs {
+                let model = SupplierModel()
+                model.supplierId = Int(entity.supplierId)
+                if let address = entity.address{
+                    model.address = address
+                }
+                if let area = entity.area{
+                    model.area = area
+                }
+                if let supplierCode = entity.supplierCode{
+                    model.supplierCode = supplierCode
+                }
+                model.provinceId = Int(entity.provinceId)
+                model.districtId = Int(entity.districtId)
+                model.regionId = Int(entity.regionId)
+                model.wardId = Int(entity.wardId)
+                if let supplierName = entity.supplierName{
+                    model.supplierName = supplierName
+                }
+                if let createdDate = entity.createdDate{
+                    model.createdDate = createdDate
+                }
+                results.append(model)
+            }
+            return results
+        }
+        return nil
+    }
+    
     func GetListShops(_ empId: Int) -> [ShopModel]? {
         var results = [ShopModel]()
         let predicate = NSPredicate(format: "empid = '\(empId)'")
         let context = NSManagedObjectContext.mr_()
-        if let objs = Shops.mr_findAll(with: predicate, in: context) as? [Shops]{
+        if let objs = Shops.mr_findAllSorted(by: "shopid", ascending: true,with: predicate, in: context) as? [Shops]{
             for entity in objs {
                 let model = ShopModel()
                 model.id = Int(entity.id)

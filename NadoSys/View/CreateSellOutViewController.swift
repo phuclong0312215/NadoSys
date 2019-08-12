@@ -566,8 +566,8 @@ extension CreateSellOutViewController: delegateDisplay{
     }
 }
 extension CreateSellOutViewController: delegateSelectSupplierData{
-    func get(_ object: ShopModel) {
-        txtSupplier.text = "\(object.shopCode),\(object.shopName)"
-        _supplierId = object.shopId
+    func get(_ object: SupplierModel) {
+        txtSupplier.text = "\(object.supplierCode),\(object.supplierName)"
+        _supplierId = object.supplierId
     }
 }

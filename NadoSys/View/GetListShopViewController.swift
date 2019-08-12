@@ -89,7 +89,7 @@ extension GetListShopViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         Preferences.put(key: "SHOPID", value: "\(_listFilter[indexPath.row].shopId)")
         Preferences.put(key: "SHOPNAME", value: _listFilter[indexPath.row].shopName)
-        pushViewController(withIdentifier: "frmKPI")
+        pushViewController(withIdentifier: "frmEmployeeShopProfile")
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGetListShop", for: indexPath) as! cellShop

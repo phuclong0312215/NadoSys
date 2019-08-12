@@ -229,6 +229,18 @@
         <attribute name="shopname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shopname_en" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Supplier" representedClassName="Supplier" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="districtId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="provinceId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="regionId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="supplierCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supplierId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="supplierName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wardId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="Ward" representedClassName="Ward" syncable="YES" codeGenerationType="class">
         <attribute name="districtId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="provinceId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -255,5 +267,6 @@
         <element name="SellOut" positionX="-54" positionY="135" width="128" height="360"/>
         <element name="Shops" positionX="-208.80859375" positionY="93.9453125" width="128" height="300"/>
         <element name="Ward" positionX="-27" positionY="162" width="128" height="120"/>
+        <element name="Supplier" positionX="-54" positionY="135" width="128" height="195"/>
     </elements>
 </model>

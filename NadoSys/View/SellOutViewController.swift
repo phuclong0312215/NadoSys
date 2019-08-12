@@ -25,7 +25,7 @@ class SellOutViewController: UIViewController {
     @IBOutlet weak var myCollect: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         if _type == "SELLOUT"{
             _imageType = (_dataOfflineController.ByObjectName("SaleOut", objectName: "Sale Out")?.objectId)!
         }
@@ -46,6 +46,10 @@ class SellOutViewController: UIViewController {
         getNumberDayfromCurrent()
         loadData(Date())
         addRightButton()
+        if _type == "SELLOUT"{
+            showPopup()
+        }
+       
         // Do any additional setup after loading the view.
     }
     
@@ -71,6 +75,24 @@ class SellOutViewController: UIViewController {
             UIBarButtonItem(title: "NDS", style:.plain, target:nil, action:nil)
     }
     
+    func showPopup(){
+        if _listSellout.count == 0{
+            let popup = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopupSellout") as! PopupSelloutViewController
+            self.addChild(popup)
+            popup.delegate = self
+            popup.view.frame = self.view.frame
+            self.view.addSubview(popup.view)
+            popup.didMove(toParent: self)
+        }
+        else{
+            if _listSellout.count == 1 && _listSellout[0].productId == -1 {
+                btnAdd.isHidden = true
+                _listSellout = [SellOutModel]()
+                myTable.reloadData()
+            }
+        }
+    }
+    
     func loadData(_ date: Date){
         _listSellout = _sellOutController.GetList(_shopId!, empId: (_login?.employeeId)!, saleDate: date.toShortTimeString(),objId: _imageType)!
         labelCount.text = "Số lượng: \(_listSellout.reduce(0,{$0 + $1.qty}))"
@@ -80,6 +102,12 @@ class SellOutViewController: UIViewController {
         let price = numberFormatter.string(from: NSNumber(value: total))
         labelPrice.text = "Thành tiền: \(price!)"
         myTable.reloadData()
+        if date.toShortTimeString() == Date().toShortTimeString(){
+            btnAdd.isHidden = false
+        }
+        else{
+            btnAdd.isHidden = true
+        }
     }
     
     func getNumberDayfromCurrent(){
@@ -197,5 +225,10 @@ extension SellOutViewController: delegateSellOut{
         loadData(Date())
     }
     
+}
+extension SellOutViewController: nosellDelegate{
+    func disableAddSellout() {
+        btnAdd.isHidden = true
+    }
 }
 

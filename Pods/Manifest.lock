@@ -1,4 +1,5 @@
 PODS:
+  - ACTabScrollView (0.3.0)
   - Alamofire (4.8.2)
   - CropViewController (2.5.1)
   - IQKeyboardManagerSwift (6.4.0)
@@ -7,36 +8,53 @@ PODS:
   - MagicalRecord/Core (2.3.2)
   - ObjectMapper (3.5.1)
   - PureLayout (3.1.4)
+  - ScrollableSegmentedControl (1.5.0)
   - SwiftyJSON (5.0.0)
   - Swinject (2.6.2)
   - SwinjectStoryboard (2.2.0):
     - Swinject (~> 2.6)
+  - TabPageViewController (0.2.7)
   - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
+  - ACTabScrollView (from `https://github.com/azurechen/ACTabScrollView.git`)
   - Alamofire
   - CropViewController
   - IQKeyboardManagerSwift
   - MagicalRecord
   - ObjectMapper
   - PureLayout
+  - ScrollableSegmentedControl
   - SwiftyJSON
   - Swinject
   - SwinjectStoryboard
+  - TabPageViewController
   - Toast-Swift
 
+EXTERNAL SOURCES:
+  ACTabScrollView:
+    :git: https://github.com/azurechen/ACTabScrollView.git
+
+CHECKOUT OPTIONS:
+  ACTabScrollView:
+    :commit: e7dbd22bb047c58753ff5a940552333f9b106b60
+    :git: https://github.com/azurechen/ACTabScrollView.git
+
 SPEC CHECKSUMS:
+  ACTabScrollView: 9ed2c86bcb54a41b4bea74d4d2dc3a5ed9592900
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   CropViewController: 10ba7af75e302f2db7eb913f8aa1156f95cfe88e
   IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  ScrollableSegmentedControl: 2e64bbe8968a7fcd8aae5014434481464fcdfe60
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+  TabPageViewController: c37a1257a50c2b50712dde61bf499768eee95b67
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: d333291be9d661a855af3c69256eb71072a84e00
+PODFILE CHECKSUM: b1784cdc76c18adcb0e82c6e10aabfa328a32845
 
 COCOAPODS: 1.4.0

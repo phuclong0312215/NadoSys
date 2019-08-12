@@ -71,12 +71,14 @@
 		9359712422B54F1900B6929A /* ImageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359712322B54F1900B6929A /* ImageListModel.swift */; };
 		9359712622B54FB600B6929A /* ImageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359712522B54FB600B6929A /* ImageListController.swift */; };
 		9359712822B54FC400B6929A /* IImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359712722B54FC400B6929A /* IImageList.swift */; };
+		935F2CAC22FB328800C900D0 /* EmployeeShopProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F2CAB22FB328800C900D0 /* EmployeeShopProfileViewController.swift */; };
 		936616B122A95B3F00134937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936616B022A95B3F00134937 /* AppDelegate.swift */; };
 		936616B322A95B3F00134937 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936616B222A95B3F00134937 /* ViewController.swift */; };
 		936616B622A95B3F00134937 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936616B422A95B3F00134937 /* Main.storyboard */; };
 		936616B922A95B3F00134937 /* NadoSys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 936616B722A95B3F00134937 /* NadoSys.xcdatamodeld */; };
 		936616BB22A95B4400134937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936616BA22A95B4400134937 /* Assets.xcassets */; };
 		936616BE22A95B4400134937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936616BC22A95B4400134937 /* LaunchScreen.storyboard */; };
+		936854CD22FC72D00031DC8F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936854CC22FC72D00031DC8F /* DashboardViewController.swift */; };
 		9386622C22A97672001D5B00 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386622522A97672001D5B00 /* BEMAnimationManager.m */; };
 		9386622D22A97672001D5B00 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386622622A97672001D5B00 /* BEMPathManager.m */; };
 		9386622E22A97672001D5B00 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386622722A97672001D5B00 /* BEMCheckBoxGroup.m */; };
@@ -127,6 +129,9 @@
 		93F5AC4322BA86C900CC459D /* IDisplayStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5AC4222BA86C900CC459D /* IDisplayStand.swift */; };
 		93FBCA3622B156C800341554 /* DisplayMainItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBCA3522B156C800341554 /* DisplayMainItemViewController.swift */; };
 		93FBCA3822B1BF6F00341554 /* DisplayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBCA3722B1BF6F00341554 /* DisplayDataViewController.swift */; };
+		93FDBAEC22FDCBF900C72636 /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDBAEB22FDCBF900C72636 /* ReportModel.swift */; };
+		93FDBAEF22FE744900C72636 /* PopupSelloutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDBAEE22FE744900C72636 /* PopupSelloutViewController.swift */; };
+		93FDBAF12300114C00C72636 /* SupplierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDBAF02300114C00C72636 /* SupplierModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +200,7 @@
 		9359712322B54F1900B6929A /* ImageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListModel.swift; sourceTree = "<group>"; };
 		9359712522B54FB600B6929A /* ImageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListController.swift; sourceTree = "<group>"; };
 		9359712722B54FC400B6929A /* IImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IImageList.swift; sourceTree = "<group>"; };
+		935F2CAB22FB328800C900D0 /* EmployeeShopProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeShopProfileViewController.swift; sourceTree = "<group>"; };
 		936616AD22A95B3F00134937 /* NadoSys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NadoSys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936616B022A95B3F00134937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936616B222A95B3F00134937 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 		936616BA22A95B4400134937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		936616BD22A95B4400134937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		936616BF22A95B4400134937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		936854CC22FC72D00031DC8F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		9386622422A97672001D5B00 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
 		9386622522A97672001D5B00 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
 		9386622622A97672001D5B00 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
@@ -262,6 +269,9 @@
 		93F5AC4222BA86C900CC459D /* IDisplayStand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplayStand.swift; sourceTree = "<group>"; };
 		93FBCA3522B156C800341554 /* DisplayMainItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMainItemViewController.swift; sourceTree = "<group>"; };
 		93FBCA3722B1BF6F00341554 /* DisplayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDataViewController.swift; sourceTree = "<group>"; };
+		93FDBAEB22FDCBF900C72636 /* ReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
+		93FDBAEE22FE744900C72636 /* PopupSelloutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSelloutViewController.swift; sourceTree = "<group>"; };
+		93FDBAF02300114C00C72636 /* SupplierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierModel.swift; sourceTree = "<group>"; };
 		EB93D1CE077AC1F636B0AAF7 /* Pods-NadoSys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NadoSys.release.xcconfig"; path = "Pods/Target Support Files/Pods-NadoSys/Pods-NadoSys.release.xcconfig"; sourceTree = "<group>"; };
 		F42A7AB9074AB6C6F7BB0B06 /* Pods_NadoSys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NadoSys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -363,6 +373,7 @@
 		936616AF22A95B3F00134937 /* NadoSys */ = {
 			isa = PBXGroup;
 			children = (
+				93FDBAED22FE742300C72636 /* Popup */,
 				931B805722AB9F3100A43653 /* Cell */,
 				936616CE22A95F3A00134937 /* View */,
 				931B803F22AA5B1000A43653 /* Protocol */,
@@ -423,6 +434,8 @@
 				9342C29122F1F55A00BC2E83 /* ShopDirectViewController.swift */,
 				9342C29322F1F57D00BC2E83 /* ShopSubDealerViewController.swift */,
 				9320F6ED22F8852B00E53FE5 /* GetListShopViewController.swift */,
+				935F2CAB22FB328800C900D0 /* EmployeeShopProfileViewController.swift */,
+				936854CC22FC72D00031DC8F /* DashboardViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -509,8 +522,18 @@
 				932222E822DF8F7200AC1119 /* RegionSelectModel.swift */,
 				93D4486F22E2FC200046F5C5 /* POSMModel.swift */,
 				9320F6E922F860E800E53FE5 /* ReportMarketShopModel.swift */,
+				93FDBAEB22FDCBF900C72636 /* ReportModel.swift */,
+				93FDBAF02300114C00C72636 /* SupplierModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		93FDBAED22FE742300C72636 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				93FDBAEE22FE744900C72636 /* PopupSelloutViewController.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		BE1407DFC864CEE17A24D7A4 /* Pods */ = {
@@ -618,28 +641,34 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NadoSys/Pods-NadoSys-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ACTabScrollView/ACTabScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableSegmentedControl/ScrollableSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"${BUILT_PRODUCTS_DIR}/TabPageViewController/TabPageViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACTabScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TabPageViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +709,7 @@
 				93F5AC2722B5E9A900CC459D /* IDataOnline.swift in Sources */,
 				9355C27922AE4971005CF89A /* cellModelDisplay.swift in Sources */,
 				9386625922A976EF001D5B00 /* LoginModel.swift in Sources */,
+				93FDBAF12300114C00C72636 /* SupplierModel.swift in Sources */,
 				931B805622AB9B5700A43653 /* ShopViewController.swift in Sources */,
 				93F5AC3922B92D6F00CC459D /* IPromotion.swift in Sources */,
 				9355C26F22AE0794005CF89A /* BaseViewController.swift in Sources */,
@@ -715,6 +745,7 @@
 				9386624822A97684001D5B00 /* SWRevealViewController.m in Sources */,
 				93D4487A22E765560046F5C5 /* RouterViewController.swift in Sources */,
 				931B804E22AB637C00A43653 /* DisplayGuideModel.swift in Sources */,
+				936854CD22FC72D00031DC8F /* DashboardViewController.swift in Sources */,
 				932572BB22BDE17100D2961B /* SellOutModel.swift in Sources */,
 				93F5AC2B22B7E11800CC459D /* CreateCollectViewController.swift in Sources */,
 				931B051022C1195700FD03A0 /* IAttandance.swift in Sources */,
@@ -741,6 +772,7 @@
 				9386625622A97684001D5B00 /* URLs.swift in Sources */,
 				931B804422AA611900A43653 /* ShopModel.swift in Sources */,
 				932222EB22E21E9900AC1119 /* cellLocation.swift in Sources */,
+				935F2CAC22FB328800C900D0 /* EmployeeShopProfileViewController.swift in Sources */,
 				9386624D22A97684001D5B00 /* CoreDataManager.swift in Sources */,
 				9386625022A97684001D5B00 /* Reachability.swift in Sources */,
 				93F5AC3322B92B8700CC459D /* PromotionModel.swift in Sources */,
@@ -754,10 +786,12 @@
 				9355C27322AE430C005CF89A /* DisplayItemViewController.swift in Sources */,
 				9355C27722AE495E005CF89A /* cellImageDisplay.swift in Sources */,
 				93B9436B22BA932B001076C2 /* CreateDisplayStandViewController.swift in Sources */,
+				93FDBAEF22FE744900C72636 /* PopupSelloutViewController.swift in Sources */,
 				93149F8122CB2229009792AB /* cellTotal.swift in Sources */,
 				9386622E22A97672001D5B00 /* BEMCheckBoxGroup.m in Sources */,
 				93F5AC2922B7E0D600CC459D /* CollectDataViewController.swift in Sources */,
 				9386625222A97684001D5B00 /* Swinject.swift in Sources */,
+				93FDBAEC22FDCBF900C72636 /* ReportModel.swift in Sources */,
 				932572BD22BDE33D00D2961B /* SellOutController.swift in Sources */,
 				9386624A22A97684001D5B00 /* SVProgressHUD.m in Sources */,
 				931B051222C1232400FD03A0 /* ShopProfileViewController.swift in Sources */,

@@ -8,15 +8,15 @@
 
 import UIKit
 protocol delegateSelectSupplierData {
-    func get(_ object: ShopModel)
+    func get(_ object: SupplierModel)
 }
 class SupplierListViewController: UIViewController {
 
     var _supplierId: Int = 0
     var _delegate: delegateSelectSupplierData?
     var resultSearchController = UISearchController()
-    var _listShops = [ShopModel]()
-    var _listFilter = [ShopModel]()
+    var _listShops = [SupplierModel]()
+    var _listFilter = [SupplierModel]()
     var _dataOfflineController: IDataOffline!
     var _login = Defaults.getUser(key: "LOGIN")
     @IBOutlet weak var myTable: UITableView!
@@ -36,10 +36,10 @@ class SupplierListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func getSupplier(){
-        _listShops = _dataOfflineController.GetListShops((_login?.employeeId)!)!
+        _listShops = _dataOfflineController.GetListSuppliers()!
         _listFilter = _listShops
         if _supplierId > 0{
-            _listFilter.filter{$0.shopId == _supplierId}.first?.isCheck = 1
+            _listFilter.filter{$0.supplierId == _supplierId}.first?.isCheck = 1
         }
         updateTableView()
     }
@@ -90,7 +90,7 @@ extension SupplierListViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellModelList", for: indexPath) as! cellModelList
         if (self.resultSearchController.isActive) {
-            cell.labelModel.text = "\(_listFilter[indexPath.row].shopCode),\(_listFilter[indexPath.row].shopName)"
+            cell.labelModel.text = "\(_listFilter[indexPath.row].supplierCode),\(_listFilter[indexPath.row].supplierName)"
             if _listFilter[indexPath.row].isCheck == 1 {
                 cell.imgCheck.image = UIImage(named: "ic_checked")
             }
@@ -99,7 +99,7 @@ extension SupplierListViewController: UITableViewDelegate,UITableViewDataSource{
             }
         }
         else {
-            cell.labelModel.text = "\(_listShops[indexPath.row].shopCode),\(_listShops[indexPath.row].shopName)"
+            cell.labelModel.text = "\(_listShops[indexPath.row].supplierCode),\(_listShops[indexPath.row].supplierName)"
             if _listShops[indexPath.row].isCheck == 1 {
                 cell.imgCheck.image = UIImage(named: "ic_checked")
             }
@@ -117,7 +117,7 @@ extension SupplierListViewController: UITableViewDelegate,UITableViewDataSource{
 extension SupplierListViewController: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         _listFilter.removeAll()
-        _listFilter = _listShops.filter { $0.shopCode.contains(searchController.searchBar.text!) || $0.shopName.contains(searchController.searchBar.text!)}
+        _listFilter = _listShops.filter { $0.supplierCode.contains(searchController.searchBar.text!) || $0.supplierName.contains(searchController.searchBar.text!)}
         updateTableView()
     }
     

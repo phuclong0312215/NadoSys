@@ -49,10 +49,12 @@ public class ShopModel: NSObject, Mappable,Codable{
     var shopname_en: String = ""
     var reportDate: String = ""
     var jsonvalue: String = ""
+    var grade: String = ""
     var item = JSON()
     var employeeId: Int = 0
     var isCheck: Int = 0
     public func mapping(map: Map) {
+        grade    <- map["grade"]
         isWait    <- map["isWait"]
         newCode    <- map["newCode"]
         shopName_nosign    <- map["shopName_nosign"]

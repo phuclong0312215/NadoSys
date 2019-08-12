@@ -116,7 +116,10 @@ class MainViewController: UIViewController {
 //        else{
 //             pushViewController(withIdentifier: "frmShop")
 //        }
-        pushViewController(withIdentifier: "frmShopSumary")
+        let tc = DashboardViewController()
+      //  navigationController?.pushViewController(tc, animated: true)
+       pushViewController(withIdentifier: "frmShopSumary")
+       // pushViewController(withIdentifier: "frmA")
       
     }
 
