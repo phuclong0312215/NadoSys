@@ -69,7 +69,7 @@ class ViewController: BaseViewController {
     }
     @IBAction func Login(_ sender: Any) {
         if txtUserName.text == "" {
-            Function.Message("Thông báo", message: "Vui lòng nhập tên đăng nhâpj.")
+            Function.Message("Thông báo", message: "Vui lòng nhập tên đăng nhập.")
             
             return;
         }
@@ -90,7 +90,7 @@ class ViewController: BaseViewController {
                     }
                     else{
                         SVProgressHUD.dismiss()
-                        Function.Message("Thông báo", message: "Bạn nhập chưa đúng tài khoản đăng nhập.")
+                        Function.Message("Thông báo", message: "Tên đăng nhập hoặc mật khẩu không chính xác.")
                     }
                 }
             }

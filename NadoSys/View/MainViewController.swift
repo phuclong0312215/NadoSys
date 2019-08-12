@@ -33,14 +33,14 @@ class MainViewController: UIViewController {
         
         let queue = DispatchQueue(label: "com.downloaddata")
         if shops == nil || (shops?.count)! == 0{
-            SVProgressHUD.show(withStatus: "Đang cập nhật dữ lieu, vui lòng chờ…")
+            SVProgressHUD.show(withStatus: "Đang cập nhật dữ liệu, vui lòng chờ…")
             queue.async {
                 self._dataOfflineController.DownloadData { (flag) in
                     DispatchQueue.main.async {
                         if flag == true{
                             self._countDownload = self._countDownload + 1
                             if self._countDownload == self._maxDownload {
-                                self.view.makeToast("Tải thành công")
+                                self.view.makeToast("Cập nhật dữ liệu thành công")
                                 SVProgressHUD.dismiss()
                             }
                         }
@@ -52,14 +52,14 @@ class MainViewController: UIViewController {
         if regions == nil || (regions?.count)! == 0{
             queue.async {
                 if self._maxDownload == 1 {
-                      SVProgressHUD.show(withStatus: "Đang cập nhật dữ lieu, vui lòng chờ…")
+                      SVProgressHUD.show(withStatus: "Đang cập nhật dữ liệu, vui lòng chờ…")
                 }
                 self._dataOfflineController.DownloadDataRegion { (flag) in
                     DispatchQueue.main.async {
                         if flag == true{
                             self._countDownload = self._countDownload + 1
                             if self._countDownload == self._maxDownload {
-                                self.view.makeToast("Tải thành công")
+                                self.view.makeToast("Cập nhật dữ liệu thành công")
                                 SVProgressHUD.dismiss()
                             }
                         }
