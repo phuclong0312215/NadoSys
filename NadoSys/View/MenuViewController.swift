@@ -11,8 +11,8 @@ import UIKit
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var myTable: UITableView!
-    var arrMenu:[String] = ["Route Plan","POSM Inventory" ]
-   // var arrMenu:[String] = ["Route Plan","POSM Inventory","Team Management","Training"]
+    //var arrMenu:[String] = ["Route Plan","POSM Inventory","SellOut" ]
+    var arrMenu:[String] = ["Route Plan","POSM Inventory","SellOut","Team Management"]
     var arrImg:[String] = ["i_routemapping","i_materials_green","i_operation","i_team","i_training"]
     var _dataOfflineController: IDataOffline!
     
@@ -92,6 +92,10 @@ extension MenuViewController: UITableViewDelegate,UITableViewDataSource{
         case 1:
             //pushViewController(withIdentifier: "frmShop")
             performSegue(withIdentifier: "sw_posm",sender: self)
+            break
+        case 2:
+            //pushViewController(withIdentifier: "frmShop")
+            performSegue(withIdentifier: "sw_sellout",sender: self)
             break
         default:
              performSegue(withIdentifier: "sw_dashboard",sender: self)

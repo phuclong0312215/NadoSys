@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28C5F6623003C116BFC70CFEFB04C3D3"
+               BlueprintIdentifier = "F02814ECF4F0FE899E3089B6565D5DB1"
                BuildableName = "Pods_NadoSys.framework"
                BlueprintName = "Pods-NadoSys"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28C5F6623003C116BFC70CFEFB04C3D3"
+            BlueprintIdentifier = "F02814ECF4F0FE899E3089B6565D5DB1"
             BuildableName = "Pods_NadoSys.framework"
             BlueprintName = "Pods-NadoSys"
             ReferencedContainer = "container:Pods.xcodeproj">

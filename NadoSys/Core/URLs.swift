@@ -49,6 +49,7 @@ class URLs{
     public static var URL_EMPLOYEE_AVG: String = URL + "Reportting/Get_Average_byShop"
     public static var URL_EMPLOYEE_Attandance: String = URL + "Attendance/byshop"
     public static var URL_DISPLAY_FIX: String = URL + "display/fixtures"
+    public static var URL_SELLOUT_REPORT: String = URL + "Reportting/Get_Sell_ByTeam"
     
     public static var URL_RESGITER: String = URL + "candidate/register"
     public static var URL_CV: String = URL + "candidate/info"

@@ -203,6 +203,10 @@ extension SwinjectStoryboard
              viewController._dataOnlineController = resolveable.resolve(IDataOnline.self)
              viewController._sellOutController = resolveable.resolve(ISellOut.self)
         }
+        defaultContainer.storyboardInitCompleted(SellOutReportViewController.self) {
+            resolveable, viewController in
+            viewController._dataOnlineController = resolveable.resolve(IDataOnline.self)
+        }
     }
    
 }

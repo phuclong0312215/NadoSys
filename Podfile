@@ -13,8 +13,7 @@ target 'NadoSys' do
     pod 'ObjectMapper'
     pod 'CropViewController'
     pod 'Toast-Swift'
-    pod 'ScrollableSegmentedControl'
-    pod 'TabPageViewController'
+    pod 'CVCalendar', '~> 1.6.2'
     pod 'ACTabScrollView', :git => 'https://github.com/azurechen/ACTabScrollView.git'
 end
 post_install do |installer|

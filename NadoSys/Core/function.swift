@@ -76,6 +76,28 @@ extension NSMutableData {
 }
 
 extension String {
+    func toTarget() -> String{
+        
+        var str = ""
+        var unit = ""
+        if Double(self)! > 1000000000 {
+            let value = Double(self)! / 1000000000
+            let target = Decimal(round(10*value)/10)
+            return "\(target) tỷ"
+        }
+        else if Double(self)! > 1000000 {
+            let value = Double(self)! / 1000000
+            let target = Decimal(round(10*value)/10)
+            return "\(target) triệu"
+        }
+        else  if Double(self)! > 1000 {
+            let value = Double(self)! / 1000
+            let target = Decimal(round(10*value)/10)
+            return "\(target) nghìn"
+        }
+        return self
+        
+    }
     func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
@@ -350,7 +372,35 @@ extension Date
     }
 }
 class Function {
-    
+    static func firstDay(ofWeek week:Int, year: Int)->Date{
+        let Calendar = NSCalendar(calendarIdentifier: .gregorian)!
+        var dayComponent = DateComponents()
+        dayComponent.weekOfYear = week
+        dayComponent.weekday = 1
+        dayComponent.year = year
+        var date = Calendar.date(from: dayComponent)
+        
+        if(week == 1 && Calendar.components(.month, from: date!).month != 1){
+            //print(Calendar.components(.month, from: date!).month)
+            dayComponent.year = year - 1
+            date = Calendar.date(from: dayComponent)
+        }
+        return date!
+    }
+    static func lastDay(ofMonth m: Int, year y: Int) -> Date {
+        let cal = Calendar.current
+        var comps = DateComponents(calendar: cal, year: y, month: m)
+        comps.setValue(m + 1, for: .month)
+        comps.setValue(0, for: .day)
+        return cal.date(from: comps)!
+       
+    }
+    static func firstDay(ofMonth m: Int, year y: Int) -> Date {
+        let cal = Calendar.current
+        var comps = DateComponents(calendar: cal, year: y, month: m,day: 1)
+        return cal.date(from: comps)!
+        
+    }
     static func getJson(_ json: [Dictionary<String, AnyObject>]) -> Data{
         
         var jsonString:String = ""

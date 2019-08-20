@@ -55,6 +55,34 @@ public class DisplayFixModel: NSObject, Mappable,Codable{
     }
     
 }
+public class SellOutReportModel: NSObject, Mappable,Codable{
+    required convenience public init?(map: Map) {
+        self.init()
+    }
+    
+    var shopId: Int = 0
+    var shopCode: String = ""
+    var shopName_nosign: String = ""
+    var shopName: String = ""
+    var target: Double = 0
+    var quantity: Int = 0
+    var amount: Double = 0
+    var per: Double = 0
+    var sort: Int = 0
+    
+    public func mapping(map: Map) {
+        shopId    <- map["shopId"]
+        shopCode    <- map["shopCode"]
+        shopName_nosign    <- map["shopName_nosign"]
+        shopName    <- map["shopName"]
+        target    <- map["target"]
+        quantity    <- map["quantity"]
+        amount    <- map["amount"]
+        per    <- map["per"]
+        sort    <- map["sort"]
+    }
+    
+}
 public class EmployeeAttModel: NSObject, Mappable,Codable{
     required convenience public init?(map: Map) {
         self.init()

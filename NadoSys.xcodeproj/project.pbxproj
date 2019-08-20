@@ -53,6 +53,7 @@
 		932572C122BE0A8A00D2961B /* ModelListSellOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932572C022BE0A8A00D2961B /* ModelListSellOutViewController.swift */; };
 		932572C322BE8D7B00D2961B /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932572C222BE8D7B00D2961B /* QRScannerView.swift */; };
 		932572C522BE8DE800D2961B /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932572C422BE8DE800D2961B /* QRScanViewController.swift */; };
+		9325EF7B2308F1C5002AFCDA /* PopupCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9325EF7A2308F1C5002AFCDA /* PopupCalendarViewController.swift */; };
 		9331B6FF22DA35BE0090945B /* SegmentControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331B6FE22DA35BE0090945B /* SegmentControlViewController.swift */; };
 		934214E422D4E777000AB4FF /* UpdateShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934214E322D4E777000AB4FF /* UpdateShopViewController.swift */; };
 		9342C29022F1F54400BC2E83 /* ShopSumaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342C28F22F1F54400BC2E83 /* ShopSumaryViewController.swift */; };
@@ -82,6 +83,10 @@
 		936616BB22A95B4400134937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936616BA22A95B4400134937 /* Assets.xcassets */; };
 		936616BE22A95B4400134937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936616BC22A95B4400134937 /* LaunchScreen.storyboard */; };
 		936854CD22FC72D00031DC8F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936854CC22FC72D00031DC8F /* DashboardViewController.swift */; };
+		937CB26E230462E00025E464 /* DashboardSumaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937CB26D230462E00025E464 /* DashboardSumaryViewController.swift */; };
+		93847FEB2305C31000B635E0 /* SellOutReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93847FEA2305C30F00B635E0 /* SellOutReportViewController.swift */; };
+		93847FED2305C60400B635E0 /* cellSellOutReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93847FEC2305C60400B635E0 /* cellSellOutReport.swift */; };
+		93847FEF2306FD0F00B635E0 /* PopupDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93847FEE2306FD0F00B635E0 /* PopupDateViewController.swift */; };
 		9386622C22A97672001D5B00 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386622522A97672001D5B00 /* BEMAnimationManager.m */; };
 		9386622D22A97672001D5B00 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386622622A97672001D5B00 /* BEMPathManager.m */; };
 		9386622E22A97672001D5B00 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386622722A97672001D5B00 /* BEMCheckBoxGroup.m */; };
@@ -185,6 +190,7 @@
 		932572C022BE0A8A00D2961B /* ModelListSellOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelListSellOutViewController.swift; sourceTree = "<group>"; };
 		932572C222BE8D7B00D2961B /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		932572C422BE8DE800D2961B /* QRScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
+		9325EF7A2308F1C5002AFCDA /* PopupCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupCalendarViewController.swift; sourceTree = "<group>"; };
 		9331B6FE22DA35BE0090945B /* SegmentControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlViewController.swift; sourceTree = "<group>"; };
 		934214E322D4E777000AB4FF /* UpdateShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateShopViewController.swift; sourceTree = "<group>"; };
 		9342C28F22F1F54400BC2E83 /* ShopSumaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSumaryViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +222,10 @@
 		936616BD22A95B4400134937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		936616BF22A95B4400134937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936854CC22FC72D00031DC8F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		937CB26D230462E00025E464 /* DashboardSumaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSumaryViewController.swift; sourceTree = "<group>"; };
+		93847FEA2305C30F00B635E0 /* SellOutReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellOutReportViewController.swift; sourceTree = "<group>"; };
+		93847FEC2305C60400B635E0 /* cellSellOutReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellSellOutReport.swift; sourceTree = "<group>"; };
+		93847FEE2306FD0F00B635E0 /* PopupDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDateViewController.swift; sourceTree = "<group>"; };
 		9386622422A97672001D5B00 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
 		9386622522A97672001D5B00 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
 		9386622622A97672001D5B00 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
@@ -357,6 +367,7 @@
 				931DC7632301B1F800D102D2 /* cellEmployeeAtt.swift */,
 				931DC7652301B39E00D102D2 /* collecEmpAtt.swift */,
 				931DC7672301CDF200D102D2 /* cellDisplayFix.swift */,
+				93847FEC2305C60400B635E0 /* cellSellOutReport.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -445,6 +456,8 @@
 				9320F6ED22F8852B00E53FE5 /* GetListShopViewController.swift */,
 				935F2CAB22FB328800C900D0 /* EmployeeShopProfileViewController.swift */,
 				936854CC22FC72D00031DC8F /* DashboardViewController.swift */,
+				937CB26D230462E00025E464 /* DashboardSumaryViewController.swift */,
+				93847FEA2305C30F00B635E0 /* SellOutReportViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +554,8 @@
 			isa = PBXGroup;
 			children = (
 				93FDBAEE22FE744900C72636 /* PopupSelloutViewController.swift */,
+				93847FEE2306FD0F00B635E0 /* PopupDateViewController.swift */,
+				9325EF7A2308F1C5002AFCDA /* PopupCalendarViewController.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -652,32 +667,30 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NadoSys/Pods-NadoSys-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACTabScrollView/ACTabScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CVCalendar/CVCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/ScrollableSegmentedControl/ScrollableSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
-				"${BUILT_PRODUCTS_DIR}/TabPageViewController/TabPageViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACTabScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CVCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TabPageViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +722,7 @@
 			files = (
 				9386625122A97684001D5B00 /* UIViewControllerExtensions.swift in Sources */,
 				9342C29022F1F54400BC2E83 /* ShopSumaryViewController.swift in Sources */,
+				93847FED2305C60400B635E0 /* cellSellOutReport.swift in Sources */,
 				932222DF22DF827600AC1119 /* RegionModel.swift in Sources */,
 				9359712622B54FB600B6929A /* ImageListController.swift in Sources */,
 				9386625522A97684001D5B00 /* htpp.swift in Sources */,
@@ -733,6 +747,7 @@
 				932572B322BD16A600D2961B /* cellCollectDate.swift in Sources */,
 				9386624E22A97684001D5B00 /* UserDefault.swift in Sources */,
 				93F5AC3522B92B9800CC459D /* PromotionImageModel.swift in Sources */,
+				93847FEF2306FD0F00B635E0 /* PopupDateViewController.swift in Sources */,
 				932222E122DF830400AC1119 /* ProvinceModel.swift in Sources */,
 				9355C27122AE3F2B005CF89A /* DisplayCaptureViewController.swift in Sources */,
 				931B050E22C115E700FD03A0 /* AttandanceController.swift in Sources */,
@@ -758,11 +773,13 @@
 				93D4487A22E765560046F5C5 /* RouterViewController.swift in Sources */,
 				931B804E22AB637C00A43653 /* DisplayGuideModel.swift in Sources */,
 				936854CD22FC72D00031DC8F /* DashboardViewController.swift in Sources */,
+				93847FEB2305C31000B635E0 /* SellOutReportViewController.swift in Sources */,
 				932572BB22BDE17100D2961B /* SellOutModel.swift in Sources */,
 				93F5AC2B22B7E11800CC459D /* CreateCollectViewController.swift in Sources */,
 				931B051022C1195700FD03A0 /* IAttandance.swift in Sources */,
 				936616B322A95B3F00134937 /* ViewController.swift in Sources */,
 				93D4486E22E2F7C60046F5C5 /* POSMViewController.swift in Sources */,
+				9325EF7B2308F1C5002AFCDA /* PopupCalendarViewController.swift in Sources */,
 				93F5AC3F22BA84CF00CC459D /* DisplayStandImageModel.swift in Sources */,
 				931B805222AB78A600A43653 /* LoginController.swift in Sources */,
 				93F5AC2522B5E93D00CC459D /* DataOnlineController.swift in Sources */,
@@ -805,6 +822,7 @@
 				9386625222A97684001D5B00 /* Swinject.swift in Sources */,
 				93FDBAEC22FDCBF900C72636 /* ReportModel.swift in Sources */,
 				932572BD22BDE33D00D2961B /* SellOutController.swift in Sources */,
+				937CB26E230462E00025E464 /* DashboardSumaryViewController.swift in Sources */,
 				9386624A22A97684001D5B00 /* SVProgressHUD.m in Sources */,
 				931B051222C1232400FD03A0 /* ShopProfileViewController.swift in Sources */,
 				931B051622C6751900FD03A0 /* cellMenu.swift in Sources */,
