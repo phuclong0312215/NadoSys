@@ -19,6 +19,26 @@ public class DataOnlineController: IDataOnline{
     init() {
         _http = Http()
     }
+    func GetSellOutReportDetail(_ id: Int,shopId: Int,fromDate: String,toDate: String, completionHandler: @escaping ([SellOutReportDetailModel]?, String?) -> ()) {
+        let paramaters: Parameters = [
+            "ShopId": shopId,
+            "UserId": id,
+            "FromDate": fromDate,
+            "ToDate": toDate
+        ]
+        _http?.performRequest(.get, requestURL: URLs.URL_SELLOUT_REPORT_DETAIL, params: paramaters as [String : AnyObject]) { (responseJSON) in
+            if(responseJSON != nil){
+                let swiftJSON = JSON(responseJSON)
+                let reports = swiftJSON.object
+                let arrReports = Mapper<SellOutReportDetailModel>().mapArray(JSONObject: reports)
+                completionHandler(arrReports, nil)
+            }
+            else{
+                completionHandler(nil,"get shop error.")
+            }
+        }
+    }
+    
     func GetSellOutReport(_ id: Int,fromDate: String,toDate: String, completionHandler: @escaping ([SellOutReportModel]?, String?) -> ()) {
         let paramaters: Parameters = [
             "UserId": id,

@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import SwiftyJSON
 public class EmployeeAvgModel: NSObject, Mappable,Codable{
     required convenience public init?(map: Map) {
         self.init()
@@ -80,6 +81,39 @@ public class SellOutReportModel: NSObject, Mappable,Codable{
         amount    <- map["amount"]
         per    <- map["per"]
         sort    <- map["sort"]
+    }
+    
+}
+public class SellOutReportDetailModel: NSObject, Mappable,Codable{
+    required convenience public init?(map: Map) {
+        self.init()
+    }
+    
+    var orderCode: String = ""
+    var categoryCode: String = ""
+    var cusName: String = ""
+    var cusPhone: String = ""
+    var cussAdd: String = ""
+    var barcode: String = ""
+    var model: String = ""
+    var dateString: String = ""
+    var price: Double = 0
+    var quantity: Int = 0
+    var amount: Double = 0
+    var items = JSON()
+    public func mapping(map: Map) {
+        orderCode    <- map["orderCode"]
+        categoryCode    <- map["categoryCode"]
+        cusName    <- map["cusName"]
+        cusPhone    <- map["cusPhone"]
+        cussAdd    <- map["cussAdd"]
+        barcode    <- map["barcode"]
+        model    <- map["model"]
+        dateString    <- map["dateString"]
+        price    <- map["price"]
+        quantity    <- map["quantity"]
+        amount    <- map["amount"]
+        items    <- map["items"]
     }
     
 }

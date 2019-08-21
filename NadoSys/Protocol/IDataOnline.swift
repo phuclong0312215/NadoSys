@@ -8,6 +8,7 @@
 
 import Foundation
 protocol IDataOnline {
+     func GetSellOutReportDetail(_ id: Int,shopId: Int,fromDate: String,toDate: String, completionHandler: @escaping ([SellOutReportDetailModel]?, String?) -> ()) 
      func GetSellOutReport(_ id: Int,fromDate: String,toDate: String, completionHandler: @escaping ([SellOutReportModel]?, String?) -> ()) 
      func GetReportDisplayFix(_ id: Int,shopId: Int,fromDate: String,toDate: String, completionHandler: @escaping ([DisplayFixModel]?, String?) -> ())
      func GetReportEmployeeAvg(_ id: Int,shopId: Int, completionHandler: @escaping ([EmployeeAvgModel]?, String?) -> ()) 

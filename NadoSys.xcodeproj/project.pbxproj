@@ -43,6 +43,9 @@
 		932222E722DF8D9B00AC1119 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932222E622DF8D9B00AC1119 /* LocationViewController.swift */; };
 		932222E922DF8F7200AC1119 /* RegionSelectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932222E822DF8F7200AC1119 /* RegionSelectModel.swift */; };
 		932222EB22E21E9900AC1119 /* cellLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932222EA22E21E9900AC1119 /* cellLocation.swift */; };
+		932439D3230D9BC500652D3D /* SellOutReportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932439D2230D9BC500652D3D /* SellOutReportDetailViewController.swift */; };
+		932439D5230D9E8100652D3D /* cellSellOutReportDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932439D4230D9E8100652D3D /* cellSellOutReportDetail.swift */; };
+		932439D7230D9F4E00652D3D /* cellSellOutCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932439D6230D9F4E00652D3D /* cellSellOutCustomer.swift */; };
 		932572B322BD16A600D2961B /* cellCollectDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932572B222BD16A600D2961B /* cellCollectDate.swift */; };
 		932572B522BD16F400D2961B /* SellOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932572B422BD16F400D2961B /* SellOutViewController.swift */; };
 		932572B722BD9F3700D2961B /* CreateSellOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932572B622BD9F3700D2961B /* CreateSellOutViewController.swift */; };
@@ -180,6 +183,9 @@
 		932222E622DF8D9B00AC1119 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		932222E822DF8F7200AC1119 /* RegionSelectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectModel.swift; sourceTree = "<group>"; };
 		932222EA22E21E9900AC1119 /* cellLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellLocation.swift; sourceTree = "<group>"; };
+		932439D2230D9BC500652D3D /* SellOutReportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellOutReportDetailViewController.swift; sourceTree = "<group>"; };
+		932439D4230D9E8100652D3D /* cellSellOutReportDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellSellOutReportDetail.swift; sourceTree = "<group>"; };
+		932439D6230D9F4E00652D3D /* cellSellOutCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellSellOutCustomer.swift; sourceTree = "<group>"; };
 		932572B222BD16A600D2961B /* cellCollectDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellCollectDate.swift; sourceTree = "<group>"; };
 		932572B422BD16F400D2961B /* SellOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellOutViewController.swift; sourceTree = "<group>"; };
 		932572B622BD9F3700D2961B /* CreateSellOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSellOutViewController.swift; sourceTree = "<group>"; };
@@ -368,6 +374,8 @@
 				931DC7652301B39E00D102D2 /* collecEmpAtt.swift */,
 				931DC7672301CDF200D102D2 /* cellDisplayFix.swift */,
 				93847FEC2305C60400B635E0 /* cellSellOutReport.swift */,
+				932439D4230D9E8100652D3D /* cellSellOutReportDetail.swift */,
+				932439D6230D9F4E00652D3D /* cellSellOutCustomer.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 				936854CC22FC72D00031DC8F /* DashboardViewController.swift */,
 				937CB26D230462E00025E464 /* DashboardSumaryViewController.swift */,
 				93847FEA2305C30F00B635E0 /* SellOutReportViewController.swift */,
+				932439D2230D9BC500652D3D /* SellOutReportDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -757,6 +766,7 @@
 				9386625B22A978C2001D5B00 /* PhotoModel.swift in Sources */,
 				9355C27522AE494D005CF89A /* cellCateDisplay.swift in Sources */,
 				931DC7642301B1F800D102D2 /* cellEmployeeAtt.swift in Sources */,
+				932439D5230D9E8100652D3D /* cellSellOutReportDetail.swift in Sources */,
 				932572C522BE8DE800D2961B /* QRScanViewController.swift in Sources */,
 				936616B922A95B3F00134937 /* NadoSys.xcdatamodeld in Sources */,
 				9320F6EC22F8653B00E53FE5 /* cellReportMarketShop.swift in Sources */,
@@ -795,6 +805,7 @@
 				932572C322BE8D7B00D2961B /* QRScannerView.swift in Sources */,
 				931B805422AB78E400A43653 /* ILogin.swift in Sources */,
 				93D4487422E306460046F5C5 /* POSMListSelectViewController.swift in Sources */,
+				932439D3230D9BC500652D3D /* SellOutReportDetailViewController.swift in Sources */,
 				93FBCA3622B156C800341554 /* DisplayMainItemViewController.swift in Sources */,
 				9386625322A97684001D5B00 /* Camera.swift in Sources */,
 				9359712222B54B9300B6929A /* collectImageCell.swift in Sources */,
@@ -824,6 +835,7 @@
 				932572BD22BDE33D00D2961B /* SellOutController.swift in Sources */,
 				937CB26E230462E00025E464 /* DashboardSumaryViewController.swift in Sources */,
 				9386624A22A97684001D5B00 /* SVProgressHUD.m in Sources */,
+				932439D7230D9F4E00652D3D /* cellSellOutCustomer.swift in Sources */,
 				931B051222C1232400FD03A0 /* ShopProfileViewController.swift in Sources */,
 				931B051622C6751900FD03A0 /* cellMenu.swift in Sources */,
 				931B805F22AD073200A43653 /* cellKPI.swift in Sources */,

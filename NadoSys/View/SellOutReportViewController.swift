@@ -10,6 +10,12 @@ import UIKit
 
 class SellOutReportViewController: UIViewController {
 
+    var _fromDate = ""
+    var _toDate = ""
+    var _month = 0
+    var _week = 0
+    var _year = 0
+    var _date = ""
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelAchievement: UILabel!
     @IBOutlet weak var labelActual: UILabel!
@@ -27,10 +33,14 @@ class SellOutReportViewController: UIViewController {
         super.viewDidLoad()
         myTable.delegate = self
         myTable.dataSource = self
-        labelDate.text = "Date: \(Date().month())-\(Date().year())"
-        let fromDate = Function.firstDay(ofMonth: Date().month(), year: Date().year()).toShortTimeString()
-        let toDate = Function.lastDay(ofMonth: Date().month(), year: Date().year()).toShortTimeString()
-        loaddata(fromDate,toDate: toDate)
+        _week = Date().week()
+        _year = Date().year()
+        _month = Date().month()
+        _date = Date().toShortTimeString()
+        labelDate.text = "Date: \(_month)-\(_year)"
+        _fromDate = Function.firstDay(ofMonth: Date().month(), year: Date().year()).toShortTimeString()
+        _toDate = Function.lastDay(ofMonth: Date().month(), year: Date().year()).toShortTimeString()
+        loaddata(_fromDate,toDate: _toDate)
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -70,7 +80,8 @@ class SellOutReportViewController: UIViewController {
         btnWeekly.backgroundColor = UIColor.white
         btnMonthly.backgroundColor = UIColor.white
         _type = "DAILY"
-        labelDate.text = "Date: \(Date().toShortTimeString())"
+        labelDate.text = "Date: \(_date)"
+        loaddata(_date, toDate: _date)
     }
     @IBAction func onWeekly(_ sender: Any) {
         btnDaily.titleLabel?.textColor = UIColor.black
@@ -80,7 +91,11 @@ class SellOutReportViewController: UIViewController {
         btnWeekly.backgroundColor = UIColor(netHex: 0x3E79A6)
         btnMonthly.backgroundColor = UIColor.white
         _type = "WEEKLY"
-        labelDate.text = "Date: \(Date().week())-\(Date().year())"
+        labelDate.text = "Week: \(_week)-\(_year)"
+        let gregorian = Calendar(identifier: .gregorian)
+        let fromDate = Function.firstDay(ofWeek: _week, year: _year)
+        let toDate = gregorian.date(byAdding: .day, value: 6, to: fromDate)
+        loaddata(_fromDate, toDate: _toDate)
     }
     @IBAction func onMonthly(_ sender: Any) {
         btnDaily.titleLabel?.textColor = UIColor.black
@@ -90,7 +105,10 @@ class SellOutReportViewController: UIViewController {
         btnWeekly.backgroundColor = UIColor.white
         btnMonthly.backgroundColor = UIColor(netHex: 0x3E79A6)
         _type = "MONTHLY"
-        labelDate.text = "Date: \(Date().month())-\(Date().year())"
+        labelDate.text = "Month: \(_month)-\(_year)"
+        _fromDate = Function.firstDay(ofMonth: _month, year: _year).toShortTimeString()
+        _toDate = Function.lastDay(ofMonth: _month, year: _year).toShortTimeString()
+        loaddata(_fromDate, toDate: _toDate)
     }
     
     @IBAction func onfilterDate(_ sender: Any) {
@@ -143,7 +161,18 @@ extension SellOutReportViewController: UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        pushViewController(withIdentifier: "frmSellOutDetail")
+        let controller = storyboard?.instantiateViewController(withIdentifier:"frmSellOutDetail") as! SellOutReportDetailViewController
+        controller._sellout = _lstReport[indexPath.row]
+        controller._fromDate = _fromDate
+        controller._toDate = _toDate
+        controller._type = _type
+        controller._month = _month
+        controller._date = _date
+        controller._week = _week
+        controller._year = _year
+        if let viewController = self.navigationController{
+            viewController.pushViewController(controller, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -162,22 +191,33 @@ extension SellOutReportViewController: UITableViewDelegate,UITableViewDataSource
 }
 extension SellOutReportViewController: selectCalendarDelegate{
     func returnDate(_ date: Date) {
-         loaddata(date.toShortTimeString(), toDate: date.toShortTimeString())
+         _fromDate = date.toShortTimeString()
+         _toDate = date.toShortTimeString()
+         loaddata(_fromDate, toDate: _toDate)
+         _date = date.toShortTimeString()
+         labelDate.text = "Date: \(_date)"
     }
 }
 extension SellOutReportViewController: selectDateDelegate{
     func returnDate(week: Int, month: Int, year: Int, type: String) {
         if type == "MONTHLY"{
-            let fromDate = Function.firstDay(ofMonth: month, year: year).toShortTimeString()
-            let toDate = Function.lastDay(ofMonth: month, year: year).toShortTimeString()
-            loaddata(fromDate, toDate: toDate)
+            _fromDate = Function.firstDay(ofMonth: month, year: year).toShortTimeString()
+            _toDate = Function.lastDay(ofMonth: month, year: year).toShortTimeString()
+            loaddata(_fromDate, toDate: _toDate)
+            _year = year
+            _month = month
+            labelDate.text = "Month: \(month)-\(year)"
         }
         else if type == "WEEKLY"{
             let gregorian = Calendar(identifier: .gregorian)
             let fromDate = Function.firstDay(ofWeek: week, year: year)
             let toDate = gregorian.date(byAdding: .day, value: 6, to: fromDate)
-             //return
-            loaddata(fromDate.toShortTimeString(), toDate: (toDate?.toShortTimeString())!)
+            _fromDate = fromDate.toShortTimeString()
+            _toDate = (toDate?.toShortTimeString())!
+            _week = week
+            _year = year
+            labelDate.text = "Week: \(week)-\(year)"
+            loaddata(_fromDate, toDate: _toDate)
         }
     }
 }

@@ -58,12 +58,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "587839147.237004"
+                  timestampString = "588101334.858076"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
                   endingLineNumber = "152"
-                  offsetFromSymbolStart = "301">
+                  offsetFromSymbolStart = "276">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,7 +73,7 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/ModelListViewController.swift"
-                  timestampString = "587839147.240644"
+                  timestampString = "588101334.860731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "152"
@@ -170,12 +170,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "587839147.294059"
+                  timestampString = "588101334.887773"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "144">
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,12 +185,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/View/DisplayPhotoViewController.swift"
-                  timestampString = "587839147.297928"
+                  timestampString = "588101334.890107"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "3853">
+                  offsetFromSymbolStart = "3100">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -234,12 +234,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/Popup/PopupSelloutViewController.swift"
-                  timestampString = "587839147.321265"
+                  timestampString = "588101334.899931"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
                   endingLineNumber = "52"
-                  offsetFromSymbolStart = "407">
+                  offsetFromSymbolStart = "408">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -249,12 +249,12 @@
                   moduleName = "NadoSys"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenphuclong/Desktop/github/NadoSys/NadoSys/Popup/PopupSelloutViewController.swift"
-                  timestampString = "587839147.328827"
+                  timestampString = "588101334.9022059"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>

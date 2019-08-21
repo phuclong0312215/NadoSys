@@ -12,8 +12,8 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var myTable: UITableView!
     //var arrMenu:[String] = ["Route Plan","POSM Inventory","SellOut" ]
-    var arrMenu:[String] = ["Route Plan","POSM Inventory","SellOut","Team Management"]
-    var arrImg:[String] = ["i_routemapping","i_materials_green","i_operation","i_team","i_training"]
+    var arrMenu:[String] = ["Route Plan","POSM Inventory","SellOut"]
+    var arrImg:[String] = ["i_routemapping","i_materials_green","i_sale_analytics","i_team","i_training"]
     var _dataOfflineController: IDataOffline!
     
     var _login = Defaults.getUser(key: "LOGIN")
